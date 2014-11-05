@@ -1,0 +1,82 @@
+\documentclass[master,german]{hgbthesis}
+% Zulässige Class Options: 
+%   Typ der Arbeit: diplom, master (default), bachelor, praktikum 
+%   Hauptsprache: german (default), english
+%%------------------------------------------------------------
+
+\graphicspath{{images/}}    % name of directory containing the images
+\logofile{FHOOeIntl2014}			% name of PDF, remove or use \logofile{} for no logo
+\bibliography{literatur}  	% name of the BibTeX (.bib) file
+
+
+%%%----------------------------------------------------------
+\begin{document}
+%%%----------------------------------------------------------
+
+% Einträge für ALLE Arbeiten: --------------------------------
+\title{Partielle Lösungen zur allgemeinen Problematik}
+\author{Peter A.\ Schlaumeier}
+\studiengang{Universal Computing}
+\studienort{Hagenberg}
+\abgabedatum{2014}{11}{05}	% {YYYY}{MM}{DD}
+
+%%% zusätzlich für eine Bachelorarbeit: ---------------------
+\nummer{XXXXXXXXXX-A}   % XX...X = Stud-ID, z.B. 0310238045-A  
+                        % (A = 1. Bachelorarbeit)
+\semester{Sommersemester 2012} 
+\gegenstand{Einführung in die Tiefere Problematik 1} 
+\betreuer{Alois B.~Treuer, Päd.\ Phil.} % oder \betreuerin{..}
+
+%%% zusätzlich für einen Praktikumsbericht: -----------------
+\nummer{XXXXXXXXXX-B}   % XX...X = Stud-ID, z.B. 0310238045-B  
+                        % (B = 2. Bachelorarbeit)
+\betreuer{Mag.~Pjotr I.~Czar\\Creative Director}  % \betreuerin{..}
+\firma{%
+   Oligarchic Media International GmbH\\
+   Online Division\\
+   1020 Wien, Hubertusgasse 3a
+}
+\firmenTel{1-234-5678-100}
+\firmenUrl{www.mogul.at}
+
+%\strictlicense  % erzeugt restriktive Lizenzformel
+
+%%%----------------------------------------------------------
+\frontmatter
+\maketitle
+\tableofcontents
+%%%----------------------------------------------------------
+
+\include{vorwort}		% ggfs. weglassen
+\include{kurzfassung}		
+\include{abstract}			
+
+%%%----------------------------------------------------------
+\mainmatter         % Hauptteil (ab hier arab. Seitenzahlen)
+%%%----------------------------------------------------------
+
+\include{einleitung}
+\include{diplomschrift}
+\include{latex}
+\include{abbildungen}
+\include{mathematik}
+\include{literatur}
+\include{drucken}
+\include{schluss}
+
+%%%----------------------------------------------------------
+%%%Anhang
+\appendix
+\include{anhang_a}	% Technische Ergänzungen
+\include{anhang_b}	% Inhalt der CD-ROM/DVD
+\include{anhang_c}	% Chronologische Liste der Änderungen
+\include{anhang_d}	% Quelltext dieses Dokuments
+
+%%%----------------------------------------------------------
+\MakeBibliography
+%%%----------------------------------------------------------
+
+%%%Messbox zur Druckkontrolle
+\include{messbox}
+
+\end{document}
