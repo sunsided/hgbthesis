@@ -25,7 +25,7 @@ Technisch basiert dieser Teil auf \texttt{BibTeX} \cite{Patashnik88}
 \bzw\ \texttt{Biber}%
 \footnote{Wird seit Version 2013/02/19 anstelle von \texttt{bibtex} verwendet 
 	(s.\ \url{http://biblatex-biber.sourceforge.net/}),}
-in Kombination mit dem Paket \texttt{biblatex} \cite{Lehman2011}.
+in Kombination mit dem Paket \texttt{biblatex} \cite{Lehman2014}.
 
 
 Die Verwaltung von Quellen besteht grundsätzlich aus zwei Elementen: 
@@ -51,16 +51,16 @@ Für Quellenverweise im laufenden Text verwendet man die Anweisung
 \end{itemize}
 
 \noindent%
-\textit{Verweise} ist eine durch Kommas getrennte Auflistung von Quellen-\emph{Schlüsseln}
+\textit{Verweise} ist eine durch Kommas getrennte Auflistung von $1$--$n$ Quellen-\emph{Schlüsseln}
 zur Identifikation der entsprechenden Einträge im Quellenverzeichnis.
 Mit \textit{Zusatztext} können Ergänzungstexte zum aktuellen Quellenverweis angegeben
 werden, wie \zB Kapitel- oder Seitenangaben bei Büchern.
 Einige Beispiele dazu:
 \begin{itemize}
-\item[] \verb!Mehr dazu findet sich in \cite{Kopka98}.! \newline
-      $\rightarrow$ Mehr dazu findet sich in \cite{Kopka98}.
-\item[] \verb!Mehr über \emph{Styles} in \cite[Kap.\ 3]{Kopka98}.! \newline
-      $\rightarrow$ Mehr über \emph{Styles} in \cite[Kap.\ 3]{Kopka98}.
+\item[] \verb!Mehr dazu findet sich in \cite{Kopka2003}.! \newline
+      $\rightarrow$ Mehr dazu findet sich in \cite{Kopka2003}.
+\item[] \verb!Mehr über \emph{Styles} in \cite[Kap.\ 3]{Kopka2003}.! \newline
+      $\rightarrow$ Mehr über \emph{Styles} in \cite[Kap.\ 3]{Kopka2003}.
 \item[] \verb!Die Angaben in \cite[S.\ 274--277]{Ears99} sind falsch.! \newline
       $\rightarrow$ Die Angaben in \cite[S.\ 274--277]{Ears99} sind aus meiner Sicht falsch.
 \item[] \verb!Überholt sind auch \cite{Ears99,Patashnik88,Duden97}.! \newline
@@ -73,13 +73,13 @@ Die Sortierung der Angaben im letzten Beispiel erfolgt automatisch.
 \subsection{Häufige Fehler}
 
 \subsubsection{Verweise außerhalb des Satzes}
-Quellenverweise sollten innerhalb oder am Ende eines Satzes (vor
+Quellenverweise sollten innerhalb oder am Ende eines Satzes (\dah vor
 dem Punkt) stehen, nicht \emph{außerhalb}:
 %
 \begin{center}
 \begin{tabular}{rl}
- \textbf{Falsch:}  & \ldots hier ist der Satz aus. \cite{Oetiker01} Und jetzt geht es weiter \ldots \\
- \textbf{Richtig:} & \ldots hier ist der Satz aus \cite{Oetiker01}. Und jetzt geht es weiter \ldots
+ \textbf{Falsch:}  & \ldots hier ist der Satz aus. \cite{Oetiker2014} Und jetzt geht es weiter \ldots \\
+ \textbf{Richtig:} & \ldots hier ist der Satz aus \cite{Oetiker2014}. Und jetzt geht es weiter \ldots
 \end{tabular}
 \end{center}
 
@@ -87,7 +87,7 @@ dem Punkt) stehen, nicht \emph{außerhalb}:
 Falls ein ganzer Absatz (oder mehr) aus einer Quelle zitiert wird,
 sollte man den Verweis im vorlaufenden Text platzieren und nicht
 \emph{innerhalb} des Zitats selbst. Als Beispiel die folgende Passage
-aus \cite{Oetiker01}:
+aus \cite{Oetiker2014}:
 \begin{quote}
 Typographical design is a craft. Unskilled authors often commit
 serious formatting errors by assuming that book design is mostly a
@@ -120,13 +120,13 @@ Wenn man möchte, kann man das Innere des Zitats auch in Hochkommas verpacken
 Für die Erstellung des Quellenverzeichnisses gibt es in \latex zwei
 Möglichkeiten:
 \begin{enumerate}
-\item Das Quellenverzeichnis manuell zu formatieren (s.\ \cite[S.\ 56--57]{Kopka98}).
+\item Das Quellenverzeichnis manuell zu formatieren (s.\ \cite[Abschn.\ 11.3]{Kopka2003}).
 \item Die Verwendung von \texttt{BibTeX}/\texttt{Biber} und einer zugehörigen 
 Literaturdatenbank
-(s.\ \cite[S.\ 245--255]{Kopka98}).
+(s.\ \cite[Kap.\ 12]{Kopka2003}).
 \end{enumerate}
 Tatsächlich ist die erste Variante nur bei sehr wenigen Literaturangaben interessant.
-Die Arbeit mit \texttt{BibTeX} macht sich hingegen schnell bezahlt und ist zudem wesentlich
+Die Arbeit mit \texttt{BibTeX}/\texttt{Biber} macht sich hingegen schnell bezahlt und ist zudem wesentlich
 flexibler.
 
 \subsection{Literaturdaten in BibTeX}
@@ -134,7 +134,7 @@ flexibler.
 
 BibTeX ist ein eigenständiges Programm, das aus einer "`Literaturdatenbank"' (eine oder mehrere
 Textdateien von vorgegebener Struktur) ein für \latex geeignetes Quellenverzeichnis
-erzeugt. Literatur zur Verwendung von BibTeX findet man online, \zB \cite{Taylor96,Patashnik88}.
+erzeugt. Literatur zur Verwendung von BibTeX findet man online, \zB \cite{Feder2006,Patashnik88}.
 Die BibTeX-Datei zu dieser Vorlage ist \nolinkurl{literatur.bib} (im Hauptverzeichnis).
 
 Man kann BibTeX-Dateien natürlich mit einem Texteditor manuell erstellen und für
@@ -142,10 +142,10 @@ viele Literaturquellen sind bereits fertige BibTeX-Einträge online verfügbar.
 Dabei sollte man allerdings vorsichtig sein, denn diese Einträge sind (auch bei großen
 Institutionen und Verlagen) \textbf{häufig falsch oder syntaktisch fehlerhaft}!
 Man sollte sie daher nicht ungeprüft übernehmen und insbesondere die Endergebnisse genau kontrollieren.
-Darüber hinaus gibt es eigenständige Anwendungen zur Wartung von
+Darüber hinaus gibt es eigene Anwendungen zur Wartung von
 BibTeX-Verzeichnissen, wie beispielsweise
 \emph{JabRef}.%
-\footnote{\url{http://jabref.sourceforge.net}}
+\footnote{\url{http://jabref.sourceforge.net/}}
 
 Dieses Dokument verwendet \texttt{biblatex} (Version 1.4 oder höher) in Verbindung
 mit dem Programm \texttt{biber}, 
@@ -159,7 +159,7 @@ Online-Quellen übernommene BibTeX-Daten manuell zu überarbeiten (\sa\ Abschnit
 In dieser Vorlage sind die Schnittstellen zu \texttt{biblatex} weitgehend in der Datei \nolinkurl{hgbthesis.cls} verpackt. Die typische Verwendung in der \latex-Haupt\-datei sieht folgendermaßen aus:
 %
 \begin{LaTeXCode}[numbers=none]
-\documentclass[diplom,german]{hgbthesis}
+\documentclass[master,german]{hgbthesis}
    ...
 \bibliography{literatur} /+\label{tex:literatur1}+/
    ...
@@ -298,17 +298,17 @@ Ein einbändiges Buch (Monographie), das von einem Autor oder mehreren Autoren z
 \begin{GenericCode}[numbers=none]
 @book{BurgerBurge06,
     author={Burger, Wilhelm and Burge, Mark},
-    title={Digitale Bildverarbeitung -- 
-           Eine Einführung mit Java und ImageJ},
+    title={Digitale Bildverarbeitung},
+	  subtitle={Eine Einführung mit Java und ImageJ},
     publisher={Springer-Verlag},
-    address={Heidelberg},
+    location={Heidelberg},
     edition={2},
     year={2005},
     hyphenation={german}
 }
 \end{GenericCode}
 \item[\cite{BurgerBurge06}]
-Wilhelm Burger und Mark Burge. \textit{Digitale Bildverarbeitung -- Eine
+Wilhelm Burger und Mark Burge. \textit{Digitale Bildverarbeitung. Eine
 Einführung mit Java und ImageJ}. 2.\ Aufl.\ Heidelberg: Springer-Verlag,
 2006.
 \end{itemize}
@@ -337,7 +337,7 @@ Dabei ist \texttt{title} der Titel des Beitrags, \texttt{booktitle} der Titel de
   booktitle={Biometrics: Personal Identification in Networked Society},
   publisher={Kluwer Academic Publishers},
   year={1999},
-  address={Boston},
+  location={Boston},
   editor={Jain, Anil K. and Bolle, Ruud and Pankanti, Sharath},
   chapter={13},
   pages={273-285},
@@ -359,7 +359,7 @@ hers, 1999. Kap.\ 13, S.\ 273--285.
 Konferenzbeitrag, individueller Beitrag in einem Tagungsband.
 Man beachte die Verwendung des neuen Felds \texttt{venue}
 zur Angabe des Tagungsorts und 
-\texttt{address} für den Ort der Publikation (des Verlags).
+\texttt{location} für den Ort der Publikation (des Verlags).
 
 \begin{itemize}
 \item[]
@@ -373,7 +373,7 @@ zur Angabe des Tagungsorts und
 	editor={McDermott, John P.},
 	venue={Mailand},
 	publisher={Morgan Kaufmann Publishers},
-	address={San Francisco},
+	location={San Francisco},
 	pages={819-821},
 	hyphenation={english}
 }
@@ -428,7 +428,7 @@ im BibTeX-Eintrag zu \cite{Guttman01}) und das \texttt{number}-Feld weglassen.
 \label{sec:@thesis}
 Dieser (neue) Eintragstyp kann allgemein für akademische Abschlussarbeiten verwendet werden. Er ersetzt
 insbesondere die bekannten BibTeX-Einträge \texttt{@phdthesis} (für Dissertationen) sowie
-\texttt{@mastersthesis} (für Diplom- und Masterarbeiten), die allerdings weiterhin verwendet werden können. Zusätzlich ist damit etwa auch die Angabe von Bachelorarbeiten möglich.
+\texttt{@mastersthesis} (für Di\-plom- und Masterarbeiten), die allerdings weiterhin verwendet werden können. Zusätzlich ist damit etwa auch die Angabe von Bachelorarbeiten möglich.
 
 \bigskip % kludge to force heading to next page
 \paragraph{Dissertation (Doktorarbeit):}
@@ -442,7 +442,7 @@ insbesondere die bekannten BibTeX-Einträge \texttt{@phdthesis} (für Dissertati
 	year={1987},
 	month={8},
 	institution={Universität der Bundeswehr, Fakultät für Raum- und Luftfahrttechnik},
-	address={München},
+	location={München},
 	hyphenation={german}
 }
 \end{GenericCode}
@@ -474,7 +474,7 @@ Analog zur Dissertation (s.\ oben), allerdings mit \texttt{type=\optbreaknh\{Dip
 	year={2007},
 	month={7},
 	institution={University of Applied Sciences Upper Austria, Digitale Medien},
-	address={Hagenberg, Austria},
+	location={Hagenberg, Austria},
 	url={http://theses.fh-hagenberg.at/thesis/Artner07},
   hyphenation={german}
 }
@@ -505,7 +505,7 @@ Bachelorarbeiten gelten in der Regel zwar nicht als "`richtige"' Publikationen, 
 	year={2004},
 	month={6},
 	institution={Upper Austria University of Applied Sciences, Medientechnik und {-design}},
-	address={Hagenberg, Austria},
+	location={Hagenberg, Austria},
 	hyphenation={german},
 	keywords={bachelorarbeitexample1} 
 }
@@ -538,7 +538,7 @@ Adresse angegeben wird. Sinnvollerweise wird man auch den zugehörigen URL angeb
   institution={NASA Dryden Flight Research Center},
   year={1948},
   month={1},
-  address={Edwards, CA},
+  location={Edwards, CA},
   number={NACA-RM-L8A05A},
   url={http://www.nasa.gov/centers/dryden/pdf/...05A.pdf},
   hyphenation={english}
@@ -566,6 +566,7 @@ Dieser Publikationstyp bietet sich für Dokumente an, bei denen üblicherweise k
 	author={{American Mathematical Society}},
 	title={User's Guide for the {\tt amsmath} Package},
 	year={2002},
+	month={2},
 	version={2.0},
 	url={ftp://ftp.ams.org/pub/tex/doc/amsmath/amsldoc.pdf},
 	hyphenation={english}
@@ -574,12 +575,12 @@ Dieser Publikationstyp bietet sich für Dokumente an, bei denen üblicherweise k
 \item[\cite{amsldoc02}]
 American Mathematical Society. 
 \textit{User's Guide for the {\tt amsmath} Package}. 
-Version 2.0. 2002. \textsc{url}: \url{ftp://ftp.ams.org/pub/tex/doc/amsmath/amsldoc.pdf}.
+Version 2.0. Feb. 2002. \textsc{url}: \url{ftp://ftp.ams.org/pub/tex/doc/amsmath/amsldoc.pdf}.
 \end{itemize}
 %\printbibliography[keyword=manualexample1,heading=noheader]\nocite{amsldoc02}
 %
-In obigem Beispiel ist folgendes zu beachten: 
-Da kein Autor bekannt ist, wird hier der Namen des \emph{Unternehmens} oder der \emph{Institution} im \texttt{author}-Feld angegeben, allerdings innerhalb einer \textbf{zusätzlichen Klammer} \texttt{\{..\}}, damit das Argument nicht fälschlicherweise als \emph{Vorname}+\emph{Nachname} interpretiert wird.%
+In obigem Beispiel gilt zu beachten: 
+Da kein Autor bekannt ist, wird hier der Name des \emph{Unternehmens} oder der \emph{Institution} im \texttt{author}-Feld angegeben, allerdings innerhalb einer \textbf{zusätzlichen Klammer} \texttt{\{..\}}, damit das Argument nicht fälschlicherweise als \emph{Vorname}+\emph{Nachname} interpretiert wird.%
 \footnote{Im Unterschied zu BibTeX wird in \texttt{biblatex} bei \texttt{@manual}-Einträgen das Feld \texttt{organization} nicht als Ersatz für \texttt{author} akzeptiert.}
 
 
@@ -588,7 +589,7 @@ Da kein Autor bekannt ist, wird hier der Namen des \emph{Unternehmens} oder der 
 \label{sec:@misc}
 Sollte man mit den bisher angeführten Eintragungstypen für gedruckte Publikationen
 nicht das Auslangen finden, sollte man sich zunächst die weiteren (hier nicht näher beschriebenen) 
-Typen im \texttt{biblatex}-Handbuch \cite{Lehman2011} ansehen, beispielsweise
+Typen im \texttt{biblatex}-Handbuch \cite{Lehman2014} ansehen, beispielsweise
 \texttt{@collection} für einen Sammelband als Ganzes (also nicht nur ein Beitrag darin)
 oder \texttt{@patent} für ein Patent oder eine Patentanmeldung.
 
@@ -668,7 +669,8 @@ Hier ein Beispiel für die Spezifikation einer DVD-Edition:
 \begin{GenericCode}[numbers=none]
 @video{Futurama99,
   author={Groening, Matt},
-  title={Futurama -- Season 1 Collection},
+  title={Futurama},
+	titleaddon={Season 1 Collection},
   howpublished={DVD},
   year={2002},
   month={2},
@@ -677,7 +679,7 @@ Hier ein Beispiel für die Spezifikation einer DVD-Edition:
  }
 \end{GenericCode}
 \item[\cite{Futurama99}]
-Matt Groening. \textit{Futurama -- Season 1 Collection}. DVD. 
+Matt Groening. \textit{Futurama}. Season 1 Collection. DVD. 
 Twentieth Century Fox Home Entertainment. Feb.\ 2002.
 \end{itemize}
 %\printbibliography[keyword=videoexample1,heading=noheader]\nocite{Futurama99}
@@ -692,7 +694,7 @@ Falls kein eindeutiger Autor namhaft gemacht werden kann, lässt man das
 Dieser Eintragstyp ist für Filme reserviert. 
 Hier wird von vornherein \emph{kein} Autor angegeben, weil dieser bei 
 einer Filmproduktion \ia\ nicht eindeutig zu benennen ist. 
-Im folgenden Beispiel (\sa\ \cite{Psycho}) sind die betreffenden Daten 
+Im folgenden Beispiel (\sa\ \cite{Psycho60}) sind die betreffenden Daten 
 im \texttt{note}-Feld angegeben:%
 \footnote{Übrigens achtet \texttt{biblatex} netterweise darauf, dass der  
 Punkt am Ende des \texttt{note}-Texts in der Ausgabe nicht verdoppelt wird.}
@@ -700,7 +702,7 @@ Punkt am Ende des \texttt{note}-Texts in der Ausgabe nicht verdoppelt wird.}
 \begin{itemize}
 \item[] 
 \begin{GenericCode}[numbers=none]
-@movie{Nosferatu,
+@movie{Nosferatu22,
     title={Nosferatu -- A Symphony of Horrors},
     howpublished={Film},
     year={1922},
@@ -708,13 +710,13 @@ Punkt am Ende des \texttt{note}-Texts in der Ausgabe nicht verdoppelt wird.}
     hyphenation={english}
 }
 \end{GenericCode}
-\item[\cite{Nosferatu}]
+\item[\cite{Nosferatu22}]
 \textit{Nosferatu -- A Symphony of Horrors}. Film. 
 Drehbuch/Regie:\ F.\ W.\ Murnau. 
 Mit Max Schreck, Gustav von Wangenheim, Greta Schröder.
 1922.
 \end{itemize}
-%\printbibliography[keyword=movieexample1,heading=noheader]\nocite{Nosferatu}
+%\printbibliography[keyword=movieexample1,heading=noheader]\nocite{Nosferatu22}
 %
 Die Angabe \verb!howpublished={Film}! ist hier sinnvoll, um die Verwechslung
 mit einem (möglicherweise gleichnamigen) Buch auszuschließen.
@@ -747,11 +749,11 @@ eines eigenen Eintragstyps). Hier ein konkretes Beispiel \cite{LegendOfZelda98}:
 Einen Verweis auf eine bestimmten Stelle in einem Musikstück oder Film kann man 
 ähnlich ausführen wie die Seitenangabe in einem Druckwerk.
 Besonders legendär (und häufig parodiert) ist beispielsweise die Duschszene
-in \emph{Psycho} \cite[T=00:32:10]{Psycho}.
-Alternativ zur einfachen Zeitangabe "`T=\emph{hh}:\emph{mm}:\emph{ss}"' 
+in \emph{Psycho} \cite[T=00:32:10]{Psycho60}.
+Alternativ zur simplen Zeitangabe "`T=\emph{hh}:\emph{mm}:\emph{ss}"' 
 könnte man eine bestimmte Stelle auch auf den Frame genau durch 
 den zugehörigen \emph{Timecode} "`TC=\emph{hh:mm:ss:ff}"' angeben, 
-\zB\ \cite[TC=00:32:10:12]{Psycho} für Frame \emph{ff}=12.
+\zB\ \cite[TC=00:32:10:12]{Psycho60} für Frame \emph{ff}=12.
 
 
 
@@ -762,8 +764,8 @@ Bei Verweisen auf Online-Resourcen sind grundsätzlich drei Fälle zu unterschei
 %
 \begin{itemize}
 \item[A.] Man möchte allgemein auf eine Webseite verweisen, etwa auf die 
-	"`Professional Broadcast"' Seite von Panasonic.%
-	\footnote{\url{http://www.panasonic-broadcast.de}}
+	"`Panasonic products for business"' Seite.%
+	\footnote{\url{http://business.panasonic.co.uk/}}
 	In diesem Fall wird nicht auf ein konkretes "`Werk"' verwiesen und daher
 	erfolgt \emph{keine} Aufnahme ins Quellenverzeichnis. Stattdessen
 	genügt eine einfache Fußnote mit \verb!\footnote{\url{..}}!, wie im vorigen
@@ -785,25 +787,25 @@ Bei Verweisen auf Online-Resourcen sind grundsätzlich drei Fälle zu unterschei
 
 \subsubsection{Beispiel: Wiki-Eintrag}
 \label{sec:@online-www}
-Durch den Umfang und die steigende Qualität dieserEinträge erscheint
+Durch den Umfang und die steigende Qualität dieser Einträge erscheint
 die Aufnahme in das Quellenverzeichnis durchaus berechtigt.
 Beispielsweise bezeichnet man als "`Reliquienschrein"'
 einen Schrein, in dem die Reliquien eines oder 
-mehrerer Heiliger aufbewahrt werden \cite{WikiReliquienschrein}.
+mehrerer Heiliger aufbewahrt werden \cite{WikiReliquienschrein2014}.
 %
 \begin{itemize}
 \item[]
 \begin{GenericCode}[numbers=none]
-@online{WikiReliquienschrein,
+@online{WikiReliquienschrein2014,
 	url={http://de.wikipedia.org/wiki/Reliquienschrein},
-	urldate={2011-06-19}
+	urldate={2014-11-20}
 }
 \end{GenericCode}
-\item[\cite{WikiReliquienschrein}]
+\item[\cite{WikiReliquienschrein2014}]
 \textsc{url}: \url{http://de.wikipedia.org/wiki/Reliquienschrein}
-(besucht am 19.06.{\hskip0pt}2011).
+(besucht am 20.11.{\hskip0pt}2014).
 \end{itemize}
-%\printbibliography[keyword=onlineexample2,heading=noheader]\nocite{WikiReliquienschrein}
+%\printbibliography[keyword=onlineexample2,heading=noheader]\nocite{WikiReliquienschrein2014}
 %
 In diesem Fall besteht die Quellenangabe praktisch nur mehr aus dem URL.
 Durch die (optionale) Angabe von \texttt{urldate} (im \texttt{YYYY-MM-DD} Format) wird automatisch die Information eingefügt, wann das Online-Dokument eingesehen wurde.
@@ -818,12 +820,13 @@ Durch die (optionale) Angabe von \texttt{urldate} (im \texttt{YYYY-MM-DD} Format
 @online{HistoryOfComputers2008,
     title={History of Computers},
     year={2008},
+		month={9},
     url={http://www.youtube.com/watch?v=LvKxJ3bQRKE},
     hyphenation={english}
 }
 \end{GenericCode}
 \item[\cite{HistoryOfComputers2008}]
-\textit{History of Computers}. 2008. 
+\textit{History of Computers}. Sep. 2008. 
 \textsc{url}: \url{http://www.youtube.com/watch?v=LvKxJ3bQRKE}.
 \end{itemize}
 %\printbibliography[keyword=onlineexample1,heading=noheader]\nocite{HistoryOfComputers2008}
@@ -844,18 +847,18 @@ Beispiele dazu sind die Angaben zu Abb.\ \ref{fig:CocaCola}--\ref{fig:ibm360}.
 \item[]
 \begin{GenericCode}[numbers=none]
 @online{IBM360,
-	url={http://www.plyojump.com/classes/mainframe_era.html}
+	url={http://www.plyojump.com/classes/mainframe_era.php}
 }
 \end{GenericCode}
 \item[\cite{IBM360}]
-\textsc{url}: \url{http://www.plyojump.com/classes/mainframe_era.html}.
+\textsc{url}: \url{http://www.plyojump.com/classes/mainframe_era.php}.
 \end{itemize}
 %\printbibliography[keyword=onlineexample3,heading=noheader]\nocite{IBM360}
 %
 
 \subsection{Elektronische Datenträger als Ergänzung zur Arbeit}
 
-Wird der Diplomarbeit ein elektronischer Datenträger (CD-ROM, DVD
+Wird der Abschlussarbeit ein elektronischer Datenträger (CD-ROM, DVD
 etc.) beigelegt, empfiehlt sich die angeführten Webseiten in
 elektronischer Form (vorzugsweise als PDF-Da\-tei\-en) abzulegen
 und die zugehörige Quelle im Quellenverzeichnis mit einem 
@@ -880,7 +883,7 @@ angegeben.
 
 Das \texttt{language} Attribut ermöglichte im Zusammenhang mit dem \texttt{babelbib}-Paket 
 den korrekten Satz mehrsprachiger Quellenverzeichnisse. \texttt{babelbib} wird in 
-dieser Vorlage \emph{nicht} mehr verwendet, sondern durch \texttt{biblatex} \cite{Lehman2011} ersetzt.
+dieser Vorlage \emph{nicht} mehr verwendet, sondern durch \texttt{biblatex} \cite{Lehman2014} ersetzt.
 Hier wird allerdings das \texttt{language}-Feld anders interpretiert und
 stattdessen das \texttt{hyphenation}-Feld verwendet, das man nach Möglichkeit 
 bei jedem Quelleneintrag angeben sollte, also beispielsweise
@@ -904,16 +907,16 @@ wenn es ohnehin keine andere Auflage gibt!
 
 \subsubsection{Übernahme von fertigen BibTeX-Einträgen}
 
-Viele Verlage und Literatur-Broker bieten fertige BibTeX-Einträge zum Download an.
+Viele Verlage und Literatur-Broker bieten fertige BibTeX-Einträge zum Herunterladen an.
 Dabei ist jedoch größte Vorsicht geboten, denn diese Einträge sind häufig
 unvollständig oder syntaktisch fehlerhaft!
 Sie sollten bei der Übernahme \emph{immer} auf Korrektheit überprüft werden!
-Besonderes sollte man dabei auf die korrekte Angabe der Namen, also 
-\texttt{author = \{\textit{Nachname1}, \textit{Vorname1a} \emph{Vorname1b} 
+Besonders sollte man dabei auf die korrekte Angabe der Namen, also 
+\texttt{author=\{\textit{Nachname1}, \textit{Vorname1a} \emph{Vorname1b} 
 and \textit{Nachname2}, \textit{Vorname2a} \ldots \}}%
 \footnote{Das ist \va\ bei mehrteiligen Nachnamen wichtig, weil in diesem Fall
 Vor- und Nachnamen nicht korrekt zugeordnet werden können, \zB\ 
-\texttt{author = \{van Beethoven, Ludwig and ter Linden, Jaap\}}
+\texttt{author=\{van Beethoven, Ludwig and ter Linden, Jaap\}}
 für ein hypothetisches Werk von Ludwig van Beethoven und Jaap ter Linden.}
 achten, sowie die Angabe von \texttt{volume}, \texttt{number} und \texttt{pages}.
 Die Namen von Konferenzen sind oft völlig falsch (auch bei ACM und IEEE).

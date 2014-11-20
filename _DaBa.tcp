@@ -6,7 +6,7 @@ Version=4
 MainFile=_DaBa.tex
 UseBibTeX=1
 UseMakeIndex=0
-ActiveProfile=LaTeX(utf8) ⇨ PDF
+ActiveProfile=LaTeX (UTF8) ⇨ PDF
 ProjectLanguage=de
 ProjectDialect=DE
 
