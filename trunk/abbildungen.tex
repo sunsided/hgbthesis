@@ -42,7 +42,7 @@ getrost \latex\ diese Arbeit überlassen und \emph{nicht} manuell
 eingreifen. Erst am Ende, wenn das gesamte Dokument "`steht"' und
 man mit der automatischen Platzierung wirklich nicht zurande
 kommt, sollte man (durch gezielte Platzierungsanweisungen
-\cite[S.~33]{Oetiker01}) \textbf{in Einzelfällen} eingreifen.
+\cite[S.~49]{Oetiker2014}) \textbf{in Einzelfällen} eingreifen.
 
 
 
@@ -55,7 +55,7 @@ auch die Nummerierung der Abbildungen automatisch, ebenso der
 Eintrag in das (optionale)
 Abbildungsverzeichnis%
 \footnote{Ein eigenes Verzeichnis der Abbildungen am Anfang des Dokuments
-ist zwar leicht erstellt, in einer Diplomarbeit aber (und eigentlich
+ist zwar leicht erstellt, in einer Abschlussarbeit aber (und eigentlich
 überall sonst auch) überflüssig. Man sollte es daher weglassen.}
 am Beginn des Dokuments.
 
@@ -116,7 +116,7 @@ Bildquelle~\cite{IBM360}.}
 \section{Abbildungen}
 
 Für die Einbindung von Grafiken in \latex wird die Verwendung des Stan\-dard-Pakets
-\texttt{graphicx} \cite{Carlisle99} empfohlen 
+\texttt{graphicx} \cite{Carlisle2014} empfohlen 
 (wird durch das \texttt{hagenberg}-Paket bereits eingebunden). 
 Mit dem aktuell verwendeten Workflow (\texttt{pdflatex})
 können Bild- bzw.\ Grafikformate ausschließlich 
@@ -385,11 +385,11 @@ eigenen PC installiert werden.
 
 \subsubsection{\emph{Latin Modern Roman} Fonts (OpenType)}
 
-Eine Alternative dazu sind die  "`LM-Roman"'%
+Eine Alternative dazu sind die "`LM-Roman"'%
 \footnote{\url{http://www.gust.org.pl/projects/e-foundry/latin-modern}}
  Open-Type Schriften, die speziell für die Verwendung im Umfeld von \latex\ entwickelt wurden.
 Sie sind auch Teil der MikTeX-Installation.%
-\footnote{\url{C:/Program Files (x86)/MikTeX 2.9/fonts/opentype/public/lm/}}
+\footnote{\zB unter \url{C:/Program Files (x86)/MikTeX 2.9/fonts/opentype/public/lm/}}
 Diese Schriften enthalten \ua\ Zeichen mit Umlauten und sind daher auch für deutsche Texte recht
 bequem zu verwenden.
 
@@ -891,10 +891,10 @@ jeweils mit eigener Caption. In \texttt{hgb.sty} ist eine neue Float-Umgebung \t
 %
 Wenn man möchte, kann man in diesem Fall die Caption auch unten anbringen 
 (jedenfalls aber konsistent und nicht gemischt).
-Natürlich darf man auch hier  nicht mit einer linearen  Abfolge im fertigen
+Natürlich darf man auch hier nicht mit einer linearen Abfolge im fertigen
 Druckbild rechnen, daher sind Wendungen wie
 "`... im  folgenden Programmstück ..."' zu vermeiden und entsprechende Verweise
-einzusetzen. Beispiele dafür sind die Programme \ref{prog:processors-source} und \ref{prog:CodeExample}.
+einzusetzen. Beispiele sind Programme \ref{prog:processors-source} und \ref{prog:CodeExample}.
 
 \begin{program}
 % place caption consistently either at the top or bottom:
@@ -924,8 +924,7 @@ public class My_Inverter implements PlugInFilter {
 				ip.putPixel(u, v, 255-p); // invert: $I'(u,v) \leftarrow 255 - I(u,v)$\label{MathInCode}
 			}
 		}
-	}
-			
+	}		
 } // end of class {\tt My\_Inverter}
 \end{JavaCode}
 %
