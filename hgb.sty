@@ -365,6 +365,20 @@ keepspaces=true,%
 	#1}}
 {}
 
+\lstnewenvironment{CsCode}[1][]	% code environment for C#
+{\lstset{%
+	language=[Sharp]C,
+	escapeinside={/+}{+/},% makes "/+" and "+/" available for Latex escapes (labels etc.)
+	#1}}
+{}
+
+\lstnewenvironment{ObjCCode}[1][]	% code environment for Objective-C
+{\lstset{%
+	language=[Objective]C,
+	escapeinside={/+}{+/},% makes "/+" and "+/" available for Latex escapes (labels etc.)
+	#1}}
+{}
+
 \lstnewenvironment{PhpCode}[1][]
 {\lstset{%
   language=PHP,
