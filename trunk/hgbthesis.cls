@@ -9,6 +9,11 @@
 
 \RequirePackage{ifthen}
 
+\RequirePackage{ifpdf}	% for checking PDF mode
+\ifpdf{}% \typeout{hgbthesis: *** LaTeX in PDF mode ***}
+\else{\errmessage{hgbthesis: *** LaTeX NOT running in PDF mode ***}}
+\fi
+
 \newcommand{\hgb@MainLanguage}{german}	% also referenced in hgb.sty
 \newcommand{\@matitelseiten}{}
 \newcommand{\@datitelseiten}{}
@@ -162,7 +167,7 @@
 	\vskip 15mm%
 	\makelogo%
 	\vskip 15mm%
-	{\Large\uppercase{\@addspaces{Bachelorarbeit}}%
+	{\Large\uppercase{\@addspaces{Bachelorarbeit}}}%
 	\vskip 4mm%
   {\large Nr.~\@nummer}
 	\vskip 4mm%
