@@ -4,7 +4,7 @@
 %% Bachelor- und Diplomarbeiten.
 
 \NeedsTeXFormat{LaTeX2e}
-\newcommand{\hgbthesisDate}{2014/11/05} %Versionsdatum
+\newcommand{\hgbthesisDate}{2014/12/30} %Versionsdatum
 \ProvidesClass{hgbthesis}[\hgbthesisDate\space LaTeX-Vorlage fuer Diplomarbeiten, Masterarbeiten, Bachelorarbeiten etc.]
 
 \RequirePackage{ifthen}
@@ -137,7 +137,14 @@
 \newcommand{\titelseite}{ 
   \ClassWarning{hgbthesis}{\noexpand\titelseite is deprecated - use \noexpand\maketitle instead}
   \maketitle
-} 
+}
+
+%% adds blank space after each letter (http://stackoverflow.com/a/3951837)
+\newcommand{\@addspaces}[1]{%  
+  \@tfor\letter:=#1\do{%
+    \letter\thinspace%	%\space
+  }%
+}
 
 \newcommand{\@batitel}{%
 \begin{titlepage}%
@@ -155,7 +162,7 @@
 	\vskip 15mm%
 	\makelogo%
 	\vskip 15mm%
-	{\Large B\,A\,C\,H\,E\,L\,O\,R\,A\,R\,B\,E\,I\,T}%
+	{\Large\uppercase{\@addspaces{Bachelorarbeit}}%
 	\vskip 4mm%
   {\large Nr.~\@nummer}
 	\vskip 4mm%
@@ -188,7 +195,7 @@
 	\vskip 15mm%
 	\makelogo%
 	\vskip 15mm%
-	{\Large M\,A\,S\,T\,E\,R\,A\,R\,B\,E\,I\,T}%
+	{\Large\uppercase{\@addspaces{Masterarbeit}}}%
 	\vskip 4mm%
 	{\large eingereicht am} \vskip 1mm {Fachhochschul-Masterstudiengang}%
 	\vskip 4mm%
@@ -219,7 +226,7 @@
 	\vskip 15mm%
 	\makelogo%
 	\vskip 15mm%
-	{\Large D\,I\,P\,L\,O\,M\,A\,R\,B\,E\,I\,T}%
+	{\Large\uppercase{\@addspaces{Diplomarbeit}}}%
 	\vskip 4mm%
 	{\large eingereicht am} \vskip 1mm {Fachhochschul-Diplomstudiengang}%
 	\vskip 4mm%
@@ -250,7 +257,7 @@
 	\vskip 15mm%
 	\makelogo%
 	\vskip 15mm%
-	{\Large B\,A\,C\,H\,E\,L\,O\,R\,A\,R\,B\,E\,I\,T}%
+	{\Large\uppercase{\@addspaces{Bachelorarbeit}}}%
 	\vskip 4mm%
   {\large Nr.~\@nummer}
 	\vskip 4mm%
