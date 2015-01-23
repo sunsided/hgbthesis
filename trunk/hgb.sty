@@ -553,7 +553,8 @@ keepspaces=true,%
 }	%see https://www.tug.org/applications/hyperref/manual.html
 
 
-\RequirePackage[all]{hypcap} % fixes hyperref problem with references to float captions
+%\RequirePackage[all]{hypcap} % fixes hyperref problem with references to float captions
+\RequirePackage[figure,table,table*]{hypcap}	% do not redefine figure* for use in article (withou captions)
 %\RequirePackage[novbox]{pdfsync} % ersetzt durch -synctex=-1 option
 %\RequirePackage[noadjust]{cite} % vermeidet zusätzliches Spacing vor [..] % entfernt wegen biblatex
 
