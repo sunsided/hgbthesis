@@ -656,8 +656,12 @@ die entsprechenden Zeichenfolgen automatisch eingesetzt.
 Um ein sauberes Schriftbild zu erreichen sind -- speziell im
 Deutschen wegen der großen Wortlängen -- Abteilungen
 (Silbentrennung, Hyphenation) unerlässlich, entweder manuell durch
-Einfügen von optionalen Trennzeichen oder automatisch. In \latex
-wird grundsätzlich automatisch abgeteilt, wobei die Sprache am
+Einfügen von optionalen Trennzeichen oder automatisch. 
+
+
+\subsection{Automatischer Zeilenumbruch}
+
+In \latex\ wird grundsätzlich automatisch abgeteilt, wobei die Sprache am
 Beginn des Dokuments festgelegt und entsprechende Abteilungsregeln
 für den gesamten Text verwendet werden.
 
@@ -667,33 +671,65 @@ keine geeignete Stelle für den Zeilenumbruch findet und den Text
 beabsichtigt und soll anzeigen, dass an dieser Stelle ein Problem
 besteht, das man durch manuelles Eingreifen reparieren muss.
 
+
+
+\subsection{Manueller Zeilenumbruch}
+
 Generell sollte man gegenüber der automatischen Abteilung
 misstrauisch sein und das Endergebnis stets sorgfältig überprüfen.
-Vor allem Wörter mit Umlauten oder Bindestrichen werden in \latex\ 
+Vor allem Wörter mit Umlauten oder Bindestrichen (\su) werden in \latex\ 
 oft unrichtig abgeteilt.
+
+
+\paragraph{Optionale Zeilenumbrüche:} 
 Bei Bedarf kann man mit \verb!\-! gezielt zulässige Abteilungspunkte 
 definieren, wie \zB\ in
 %
-\begin{quote}
-\verb!Fach\-hoch\-schul\-kon\-fe\-renz!.
-\end{quote}
-%
-In echten Problemfällen -- etwa bei Schwierigkeiten mit Textelementen, die nicht umgebrochen 
+\begin{itemize}
+\item[] \verb!Fach\-hoch\-schul\-kon\-fe\-renz!.
+\end{itemize}
+
+\paragraph{Zusammengesetzte Wörter:}
+Eine unangenehme Eigenheit von \latex\ ist, dass bei \emph{mit Bindestrichen} verbundenen
+Wörtern die einzelnen Wortteile generell \emph{nicht automatisch} getrennt werden!
+Das ist \va\ in deutschen Texten recht häufig und somit lästig;
+beispielsweise würde \latex\ \emph{keinen} der beiden Teile des Worts 
+\begin{itemize}
+\item[] \verb!Arbeiter-Unfallversicherungsgesetz!
+\end{itemize}
+automatisch trennen, sondern ggfs.\ ungebrochen über den Zeilenrand hinausragen
+lassen! Auch hier kann man sich natürlich (wie oben gezeigt) durch individuelles 
+Einsetzen von \verb!\-! helfen. Eine generelle Lösung bietet das (ohnehin bereits
+geladene) \texttt{babel}-Paket%
+\footnote{\url{http://www.ctan.org/tex-archive/language/german/gerdoc.pdf}} in der Form
+\begin{itemize}
+\item[] \verb!Arbeiter"=Unfallversicherungsgesetz!,
+\end{itemize}
+also durch Ersetzung des Bindestrichs mit der Zeichenfolge \verb!"=!.
+Damit wird erreicht, dass \latex\ die Wortteile wie unabhängige Einzelwörter behandelt
+und auch so umbricht.
+
+\paragraph{"`Schlampige"' Formatierung:}
+In echten Problemfällen -- etwa bei Textelementen, die nicht umgebrochen 
 werden dürfen oder können -- kann man \latex\ dazu veranlassen, in einzelnen Absätzen
 etwas weniger pingelig zu formatieren. Das erreicht man durch
 %
-\begin{quote}
+\begin{itemize}
+\item[]
 \begin{verbatim}
 \begin{sloppypar}
-    Dieser Absatz wird ``schlampig'' (sloppy) gesetzt ...
+Dieser Absatz wird ``schlampig'' (sloppy) gesetzt ...
 \end{sloppypar}
 \end{verbatim}
-\end{quote}
+\end{itemize}
 %
-Der letzte Rettungsanker ist, den betreffenden Absatz so umzuschreiben, dass sich ein passabler Zeilenumbruch ergibt (schließlich ist man ja selbst der Autor und niemandem eine
-Rechtfertigung schuldig).%
+Der allerletzte Rettungsanker ist, die betreffende Passage so umzuschreiben, dass sich ein 
+passabler Zeilenumbruch ergibt -- schließlich ist man ja selbst der Autor und 
+niemandem (abgesehen vom Betreuer) eine Rechtfertigung schuldig.%
 \footnote{Angeblich waren eigenständige Textänderungen durch Schriftsetzer
 auch beim früheren Bleisatz durchaus üblich.}
+
+
 
 
 
