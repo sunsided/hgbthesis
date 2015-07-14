@@ -4,7 +4,7 @@
 %% Bachelor- und Diplomarbeiten.
 
 \NeedsTeXFormat{LaTeX2e}
-\newcommand{\hgbthesisDate}{2014/12/30} %Versionsdatum
+\newcommand{\hgbthesisDate}{2015/07/14} %Versionsdatum
 \ProvidesClass{hgbthesis}[\hgbthesisDate\space LaTeX-Vorlage fuer Diplomarbeiten, Masterarbeiten, Bachelorarbeiten etc.]
 
 \RequirePackage{ifthen}
