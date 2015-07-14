@@ -65,7 +65,7 @@ ohne deutsche Übersetzung verwendet.} erfolgt in \latex mithilfe
 der \verb!\label{}! Anweisung, die unmittelbar auf die
 \verb!\caption{}! Anweisung folgen muss:
 %
-\begin{LaTeXCode}
+\begin{LaTeXCode}[numbers=none]
 \begin{figure}
 \centering
 \includegraphics[width=.95\textwidth]{cola-public-domain-photo-p}
@@ -229,9 +229,6 @@ im Druck auch schnell unleserlich.}
 
 
 
-
-
-
 \subsection{Vektorgrafiken}
 
 Für schematische Abbildungen (\zB Flussdiagramme, Entity-Relationship-Diagramme
@@ -255,8 +252,6 @@ oder erzeugen unsaubere Dateien. Vor der Entscheidung
 für eine bestimmte Zeichensoftware sollte man das im Zweifelsfall
 ausprobieren.
 PDF kann im Notfall über einen entsprechenden Druckertreiber erzeugt werden.
-
-
 
 
 \subsubsection{Einbettung von Schriften}
@@ -286,73 +281,7 @@ abhängig und somit kaum vorhersagbar.
 Strichstärken ($\geq 0.25\,\mathrm{pt}$) einstellen!
 
 
-\begin{comment}
 
-\subsection{Erzeugung von EPS-Dateien (nur im DVI-PS-Work\-flow relevant)}
-
-\subsubsection{EPS-Bilder }
-
-Im DVI-PS-Workflow können -- wie oben erwähnt -- nur
-EPS-Grafi\-ken eingebunden werden. Da EPS für \emph{Photoshop} ein
-Standardformat ist, lässt sich damit besonders einfach arbeiten.
-Dabei ist allerdings zu beachten, dass zur Verwendung in \latex
-die Bilder \emph{ohne} Voransicht (\emph{Preview}) gespeichert
-werden müssen (Abb.~\ref{fig:photoshop-eps-screen}). 
-%
-\begin{figure}
-\centering
-\includegraphics[scale=1.5]{photoshop-eps-screen}
-\caption{Speichern von Bildern als EPS-Dateien in \emph{Photoshop}.
-Dabei ist unbedingt zu beachten, dass ohne Preview
-(\emph{Preview-None}) gespeichert wird.
-Sowohl ASCII- wie auch Binärkodierung funktionieren mit \latex.
-%, die Anzeige der EPS-Grafiken im DVI-Viewer (mit \emph{GhostScript}) funktioniert aber nur bei ASCII-Kodierung!
-}
-\label{fig:photoshop-eps-screen}
-\end{figure}
-%
-Binärkodierte
-EPS-Dateien sind normalerweise kein Problem. Nicht alle
-Bildbearbeitungsprogramme bieten allerdings die Möglichkeit,
-direkt im EPS-Format zu exportieren.
-
-
-\subsubsection{EPS-Export aus \emph{Adobe Illustrator} oder \emph{Freehand}}
-
-Auch mit professioneller Software ergeben sich in diesem
-Zusammenhang -- zum Teil wegen der Vielzahl an
-Einstellmöglichkeiten -- immer wieder Probleme. Speziell daher zum
-Export von EPS-Grafiken aus \emph{Freehand} einige Tips %
-(\sa\ Abb.~\ref{fig:freehand-export-screen-setup}):
-%
-\begin{itemize}
-\item Exportieren Sie nur die ausgewählten Grafik-Elemente
-("`Selected objects only"'). %
-\item Exportieren Sie \emph{ohne} Vorschau ("`Preview None"'). %
-\item Vermeiden Sie die Farbkonvertierung auf CMYK -- sie kann beim
-Druck zu störender Rasterung und ungenügenden Schwarzwerten füh\-ren.
-\item Binden Sie die Schriften der Grafik in das EPS-Dokument ein
-("`Include Fonts in EPS"' im Setup-Menü). Falls das nicht möglich
-ist (bestimmte Schriften sind aus rechtlichen Gründen gesperrt),
-sollten alle Texte vor dem Export in Zeichenpfade aufgelöst werden
-("`Convert text to paths"').
-\end{itemize}
-%
-Ähnliches gilt auch für den EPS-Export aus \emph{Adobe Illustrator}.
-
-\begin{figure}
-\centering
-\includegraphics[scale=1.5]{freehand-export-screen-setup}
-\caption{Exportieren von Vektor-Grafik als EPS-Datei in {\em
-Freehand}. Das kleinere Fenster zeigt das geöffnete Setup-Menü.
-Wichtig ist, dass beim Export sicherheitshalber die Schriften in
-das EPS-Dokument eingebunden werden (\emph{Include Fonts in
-EPS})! Die Ausgabe in RGB-Farben widerspricht zwar der üblichen Konvention, 
-ist aber dennoch zu empfehlen, da bei CMYK-Konversion ungenügende Schwarzwerte 
-beim S/W-Druck auftreten können.} \label{fig:freehand-export-screen-setup}
-\end{figure}
-
-\end{comment}
 
 
 \subsection{\tex-Schriften auch in Grafiken?}
@@ -393,141 +322,66 @@ Sie sind auch Teil der MikTeX-Installation.%
 Diese Schriften enthalten \ua\ Zeichen mit Umlauten und sind daher auch für deutsche Texte recht
 bequem zu verwenden.
 
-\begin{comment}
 
-\subsubsection{Für Gourmets: Ersetzung von Symbolen mit dem \texttt{psfrag}-Paket}
-\label{sec:psfrag}
 
-Eine interessante Alternative zur Verwendung gesonderter Schriften ist die Verwendung des \texttt{psfrag}-Paket,
-mit dem Zeichenketten in EPS-Dateien \emph{nachträglich} durch beliebige \latex-Elemente ersetzt werden können. 
-Das ist allerdings \textbf{nur im DVI-PS-Workflow} möglich!
-Auf diesem Weg kann das Schriftbild in Abbildungen perfekt dem übrigen Text angepasst werden, was besonders für Illustrationen und Diagramme mit mathematischen Beschriftungen interessant ist. Ein Beispiel dazu ist in 
-Abb.~\ref{fig:psfrag-example} gezeigt, Details finden sich im zugehörigen \latex-Code.
+\subsection{Für Gourmets: Grafiken mit \latex-Overlays}
+\label{sec:GraphicOverlays}
 
-\texttt{psfrag} funktioniert allerdings nicht mit allen EPS-Dateien. Weitgehend problemlos sind Dateien, die aus \emph{Macromedia Freehand}, \emph{Adobe Illustrator} oder \emph{Mathematica} exportiert wurden. Schwierig\-keiten gibt es hingegen erfahrungsgemäß mit \emph{Microsoft Visio}, \emph{PowerPoint} und \emph{Excel}, aber auch mit Grafiken aus \emph{Canvas}.
+Bisweilen ist es erforderlich, ein bestehendes Bilder oder eine Grafik mit 
+\latex-eigenen (Vektor-)Elementen zu überlagern, \zB\ für Markierungen
+oder Beschriftungen. Ein typisches Beispiel ist in Abb.~\ref{fig:overpic-example}
+gezeigt, wo eine mit \emph{Mathematica} generierte PDF-Grafik
+mit mathematischen Elementen annotiert wird.
 
-%
-%\begin{quote}
-%\begin{sloppypar}
-%\textbf{Achtung:} Die Ersetzung mit \texttt{psfrag} \textbf{funktioniert nicht} mit \texttt{pdflatex} 
-%(Ausgabeprofil \verb!LaTeX => PDF!), da hier keine PostScript-Zwischendatei mehr erzeugt wird. 
-%Um \texttt{psfrag} zu verwenden, muss man zumindest beim finalen Durchlauf das Ausgabeprofil auf 
-%\verb!LaTeX => PS! oder \verb!LaTeX => PS => PDF! ändern.
-%\end{sloppypar}
-%\end{quote}
 
 \begin{figure}
 \centering\small
-\begin{tabular}{cc}
-\includegraphics[width=0.45\textwidth]{ellipse-parameters-1}
-&
-%\begin{psfrags} %ACHTUNG: Ersetzung funktioniert NUR im klassischen DVI-PS-Workflow!
-%\small
-%\psfrag{xc}[Bl]{$x_c$}	% Bl.. align on baseline (vert.) and left (horiz.) 
-%\psfrag{yc}[Bl]{$y_c$}
-%\psfrag{p}[Bl]{$\mathbf{p}=(u,v)$}
-%\psfrag{p}[Bl]{$\boldsymbol{p}=(u,v)$}
-%\psfrag{a}[Bl]{$\alpha$}
-%\psfrag{b}[Bl]{$\beta$}
-%\psfrag{w}[Bl]{$\varphi$}
-%verwendet die PNG-Screenshot im PDF-workflow, EPS-Version (Vektorgrafik) im DVI-PS-Workflow:
-\includegraphics[width=0.45\textwidth]{ellipse-parameters-2}
-%\end{psfrags}
-\\
-(a) & (b)
-\end{tabular}
-\caption{Beispiel für die Textersetzung in EPS-Grafiken mit dem \texttt{psfrag}-Paket. Original-Vektorgrafik, erstellt in Freehand (a); dieselbe Grafik mit Textelementen ersetzt durch mathematische Symbole oder Ausdrücke (b). 
-\textbf{Achtung:} Die tatsächliche Ersetzung funktioniert nur bei Verarbeitung im klassischen 
-DVI-PS-Workflow -- im PDF-Workflow wird in (b) nur ein Screenshot angezeigt.}
-\label{fig:psfrag-example}
+%\includegraphics[width=0.85\textwidth]{mathematica-example}
+\vspace*{3mm}
+\begin{overpic}[width=0.85\textwidth]{mathematica-example}
+	\put(101,14){$x$}%
+	\put(4,31){$f(x)$}%
+	\put(29.5,28){\line(1,1){2}}%
+	{\color{green!70!black}\put(29.5,28){\circle*{2.0}}}%
+	\put(32,30){$\cos(\frac{7}{3} x)$}%
+	\put(59,28){\line(1,1){2}}%
+	{\color{blue!70!black}\put(59,28){\circle*{2.0}}}%
+	\put(61.5,30){$\cos(x)$}%
+\end{overpic}
+\caption{Beispiel für die Verwendung des \texttt{overpic}-Pakets zum Einfügen
+von \latex-Elementen über eine importierte Grafik.
+In diesem Fall wurden die mathematischen Elemente $x$, $f(x)$, $\cos(x)$ und $\smash{\cos(\frac{7}{3} x)}$
+sowie zwei diagonale Geraden und gefüllte (färbige) Kreise eingefügt.
+Darunter liegt die Vektor\-grafik \texttt{mathematica-example.pdf}.}
+\label{fig:overpic-example}
 \end{figure}
 
-\end{comment}
 
 
-\begin{comment} % dieses Thema ist unter PDF-LaTeX kaum mehr relevant
+Dazu wird das \texttt{overpic}-Paket\footnote{\url{https://www.ctan.org/pkg/overpic}}
+verwendet und zum Importieren der Grafik anstelle von \verb!\includegraphics!
+die Umgebung \verb!\begin{overpic}! \ldots \verb!\end{overpic}! verwendet 
+(mit ähnlicher Syntax):
 
-\subsection{Probleme mit EPS-Dateien}
+\begin{LaTeXCode}[numbers=none]
+\begin{overpic}[width=0.85\textwidth]{mathematica-example}
+	\put(101,14){$x$}%
+	\put(4,31){$f(x)$}%
+	\put(29.5,28){\line(1,1){2}}%
+	...
+\end{overpic}
+\end{LaTeXCode}
 
-Obwohl EPS im Grunde ein einfaches und wohldefiniertes Datenformat
-ist, produzieren leider viele Programme unsauberen EPS-Code, der
-sich entweder überhaupt nicht einbinden lässt oder später, \zB auf
-dem Drucker, zu Fehlern führt. Typische Probleme sind etwa das
-Auftreten unbekannter PostScript-Befehle, fehlende
-Schriftdefinitionen, falsch angegebene oder fehlende
-\emph{Boun\-ding-Box\-es} und binär kodierte \emph{Preview}-Daten.
-
-
-\subsubsection{EPS-Dateien überprüfen}
-
-Einige dieser Probleme kann man bereits im Vorfeld erkennen, in
-dem man die betroffenen EPS-Dateien einfach mit einem Texteditor,
-der auch große Dateien darstellen kann (beispielsweise mit \emph{TeXnicCenter}, \emph{Ultra\-Edit}, 
-{\em Win\-Edt} oder \emph{Emacs}),%
-\footnote{Dazu zählt auch der in der
-Unix-Welt beliebte \texttt{vi}-Editor, in dem allerdings auch
-abgehärtete Benutzer ein gewisses masochistisches Element zu
-erkennen glauben.}
-öffnet. Eine reguläre EPS-Datei muss jedenfalls mit der Zeichenfolge 
-\begin{center}
-\verb|%!PS-Adobe|
-\end{center}
-beginnen,
-wie das Beispiel in Abb.~\ref{fig:eps-source} zeigt.
-%
-\begin{figure}
-\centering
-\begin{GenericCode}
-%!PS-Adobe-2.0 EPSF-1.2
-%%Title: workflow.fh8
-%%Creator: FreeHand 8.0
-%%CreationDate: Mon Jul 16 20:04:10 2001
-%%BoundingBox: 0 0 420 138
-...
-end
-%%Trailer
-\end{GenericCode}
-%
-\caption{Inhalt einer typischen EPS-Datei.
-Wichtig für die Einbindung in \latex ist v.a., dass keinerlei
-Zeichen \emph{vor} dem "`\texttt{\%!}"' erscheinen und dass
-im Kopf ein korrekter Eintrag für die \emph{Bounding Box} enthalten ist.
-Die Maßeinheit für die Größe der \emph{Bounding Box} ist übrigens
-$\frac{1}{72}$ Zoll.}
-\label{fig:eps-source}
-\end{figure}
-%
-Durch das Öffnen mit Adobe \emph{Photoshop} (in den ein
-vollständiger \emph{Post\-Script}-Interpreter eingebaut ist) lässt
-sich übrigens leicht feststellen, wie eine EPS-Datei in einer
-beliebigen Auflösung "`rendert"'. Probleme mit fehlenden Schriften
-können dabei allerdings unbemerkt bleiben, \va\ dann, wenn die
-ursprüngliche Grafik auf dem selben Computer erstellt wurde.
+Die \texttt{overpic}-Umgebung bildet gleichzeitig eine \texttt{picture}-Umgebung, 
+in der \latex-Zeichenanweisungen (wie \verb!\put! u.ä.) platziert werden
+können, wie in obigem Beispiel gezeigt.\footnote{Die Standard-Zeichenanweisungen
+in \latex sind ziemlich restriktiv, weshalb hier zusätzlich das \texttt{pict2e}-Paket
+(\url{https://www.ctan.org/pkg/pict2e}) verwendet wird.}
+Die $x/y$-Positionen sind in Prozent der Bildbreite angegeben.
+Weitere Details finden sich im Quelltext.
 
 
-\subsubsection{EPS-Grafiken über PDF generieren}
 
-Falls man Grafiken aus einer Applikation übernehmen möchte, die
-keine Möglichkeit zum EPS-Export anbietet (\zB\ {\em
-PowerPoint}) oder unbrauchbare EPS-Dateien erzeugt, kann man
-auch den Umweg
-über eine PDF-Datei nehmen: 
-%
-\begin{itemize}
-\item Dazu erzeugt man zunächst mit Adobe \emph{Distiller} (als
-virtueller Drucker) eine PDF-Datei. %
-\item Dann öffnet man die PDF-Datei mit \emph{Acrobat}, schneidet
-diese (mit dem \emph{Crop Tool}) auf das richtige Format und %
-\item speichert schließlich die Datei (mit \emph{Save As}) im
-\texttt{eps}-Format, natürlich wiederum \emph{ohne} Preview
-(in \emph{Settings} einstellbar). %
-\end{itemize}
-Das ist zwar etwas mühsamer als auf dem direkten Weg, aber im
-Notfall meist einfacher als ein Grafik ganz neu zu machen. 
-Eventuelle Probleme bei \texttt{psfrag}-Ersetzungen (siehe Abschn.\ \ref{sec:tex-schriften-in-grafiken}) sind dabei 
-allerdings nicht auszuschließen.
-
-\end{comment}
 
 
 \subsection{Abbildungen mit mehreren Elementen}
