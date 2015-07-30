@@ -117,7 +117,7 @@ Wenn man möchte, kann man das Innere des Zitats auch in Hochkommas verpacken
 
 In seltenen Fällen kommt es vor, dass man eine Quelle \textbf{A} angeben
 möchte (oder muss), die man zwar nicht zur Hand -- und damit auch nicht selbst gelesen --
-hat, die aber in einer anderen, vorliegenden Quelle \textbf{B} zitiert wird.
+hat, die aber in einer \emph{anderen}, vorliegenden Quelle \textbf{B} zitiert wird.
 In diesem Fall bezeichnet man \textbf{A} als \emph{Original-} oder \emph{Primärquelle} und \textbf{B} 
 als \emph{Sekundärquelle}. Dabei sollte man folgende Grundregeln beachten:
 %
@@ -130,7 +130,7 @@ eingesehen} (gelesen) haben!
 \item
 Nur wenn man die Quelle wirklich \textbf{nicht} beschaffen kann, ist ein Verweis über eine Sekundärquelle
 zulässig. In diesem Fall sollten korrekterweise Pri\-mär- und Sekundärquelle \emph{gemeinsam} 
-angegeben werden, wie in nachfolgedem Beispiel gezeigt.
+angegeben werden, wie im nachfolgenden Beispiel gezeigt.
 \item
 \textbf{Wichtig:} In das Quellenverzeichnis wird \textbf{nur die tatsächlich vorliegende Quelle} 
 (\textbf{B}) und nicht die Originalarbeit aufgenommen!
@@ -148,20 +148,20 @@ S.~314 (1632). Zitiert nach \cite[S.~59]{Hemleben1969}.} % Alle Seitennummern si
 Für die Erstellung des Quellenverzeichnisses gibt es in \latex zwei
 Möglichkeiten:
 \begin{enumerate}
-\item Das Quellenverzeichnis manuell zu formatieren (s.\ \cite[Abschn.\ 11.3]{Kopka2003}).
+\item Das Quellenverzeichnis manuell zu formatieren (nicht zu empfehlen, 
+s.\ \cite[Abschn.\ 11.3]{Kopka2003}).
 \item Die Verwendung von \texttt{BibTeX}/\texttt{Biber} und einer zugehörigen 
-Literaturdatenbank
-(s.\ \cite[Kap.\ 12]{Kopka2003}).
+"`Literaturdatenbank"' (s.\ \cite[Kap.\ 12]{Kopka2003}).
 \end{enumerate}
 Tatsächlich ist die erste Variante nur bei sehr wenigen Literaturangaben interessant.
-Die Arbeit mit \texttt{BibTeX}/\texttt{Biber} macht sich hingegen schnell bezahlt und ist zudem wesentlich
+Die Arbeit mit \texttt{BibTeX}/\texttt{biber} macht sich hingegen schnell bezahlt und ist zudem wesentlich
 flexibler.
 
 \subsection{Literaturdaten in BibTeX}
 \label{sec:bibtex}
 
 BibTeX ist ein eigenständiges Programm, das aus einer "`Literaturdatenbank"' (eine oder mehrere
-Textdateien von vorgegebener Struktur) ein für \latex geeignetes Quellenverzeichnis
+Textdateien mit vorgegebener Struktur) ein für \latex geeignetes Quellenverzeichnis
 erzeugt. Literatur zur Verwendung von BibTeX findet man online, \zB \cite{Feder2006,Patashnik88}.
 Die BibTeX-Datei zu dieser Vorlage ist \nolinkurl{literatur.bib} (im Hauptverzeichnis).
 
@@ -172,8 +172,8 @@ Institutionen und Verlagen) \textbf{häufig falsch oder syntaktisch fehlerhaft}!
 Man sollte sie daher nicht ungeprüft übernehmen und insbesondere die Endergebnisse genau kontrollieren.
 Darüber hinaus gibt es eigene Anwendungen zur Wartung von
 BibTeX-Verzeichnissen, wie beispielsweise
-\emph{JabRef}.%
-\footnote{\url{http://jabref.sourceforge.net/}}
+\emph{JabRef}.\footnote{\url{http://jabref.sourceforge.net/}}
+
 
 \subsubsection{Verwendung von \texttt{biblatex} und \texttt{biber}}
 
