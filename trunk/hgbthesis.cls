@@ -77,7 +77,7 @@
 	\renewcommand{\@semester}{#1}
 }
 
-\newcommand{\@logofile}[0]{} %UASUA-Wappen_4c}
+\newcommand{\@logofile}[0]{}
 \newcommand{\logofile}[1]{%
 	\renewcommand{\@logofile}{#1}
 }
