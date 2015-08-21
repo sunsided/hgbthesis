@@ -1,7 +1,8 @@
 \chapter{Zum Arbeiten mit \latex}
 \label{cha:ArbeitenMitLatex}
 
-
+\section{Einstieg}
+\label{sec:LatexEinstieg}
 
 \latex ist eine in den Naturwissenschaften sehr verbreitete
 und mittlerweile klassische Textverarbeitungssoftware für das Erstellen
@@ -22,8 +23,8 @@ eine für den Anfänger recht komplizierte -- und zugehörige Werkzeuge.
 Ungewohnt erscheinen sicher auch die vermeintlich starken
 Einschränkungen von \latex,
 insbesondere in Bezug auf die Wahl der Schriften und das
-Layout. Während man anfangs meint, dass diese Rigidität
-die eigene Kreativität beschränkt, bemerkt man mit der Zeit, dass es gerade
+Layout. Während anfangs of der Eindruck entsteht, dass diese Rigidität
+die eigene Kreativität beschränkt, fällt mit der Zeit auf, dass es gerade
 dadurch gelingt, sich stärker auf die Inhalte der Arbeit zu
 konzentrieren als auf deren äußere Form. Dass am Ende die Form dennoch stimmt,
 ist allerdings nur dann gewährleistet, wenn man sich bei den eigenen Modifikationen
@@ -33,9 +34,9 @@ man ist in der Zwischenzeit bereits selbst zum \latex-\emph{Guru} avanciert.
 Insgesamt lohnt sich der Aufwand, wie viele meinen, zumal die Abschlussarbeit
 in jedem Fall (mit oder ohne \latex) ein substantielles Stück Arbeit ist.
 Allerdings sollte mithilfe von \latex ein professionell aussehendes
-Ergebnis einfacher zu erreichen sein und man wird sich wohl auch einigen
-Ärger mit Fehlern und Einschränkungen gängiger Software ersparen.
-Zudem könnte es durchaus sein, dass man nebenbei auch sein Auge für
+Ergebnis einfacher zu erreichen sein und es dürfte wohl auch einiger
+Ärger mit Fehlern und Einschränkungen gängiger Software erspart bleiben.
+Zudem könnte es durchaus sein, dass sich nebenbei auch das eigene Auge für
 die Feinheiten des Buchsatzes (weiter-){\optbreaknh}entwickelt.%
 \footnote{Dieses abschließende Textelement wurde übrigens zur Ermöglichung eines 
 Zeilenumbruchs nach der Klammer so gesetzt: \texttt{\ldots (weiter-)\{{\bs}optbreaknh\}entwickelt.}
@@ -43,13 +44,10 @@ Das Makro \texttt{{\bs}optbreaknh} ("`optional break with no hyphen"') ist in
 \texttt{hgb.sty} definiert.}
 
 
-\section{Einstieg}
-\label{sec:LatexEinstieg}
-
 \subsection{Software}
 
-Zum Arbeiten mit \latex benötigt man -- neben einem Computer -- natürlich Software. Musste man sich früher oft die einzelnen Komponenten von \latex mühevoll zusammensuchen und für die eigene Umgebung konfigurieren, gibt es mittlerweile für die wichtigsten Plattformen (Windows, Mac~Os, Linux) fertige \latex-Installationen, die ohne weiteres Zutun laufen. Die aktuelle Version von \latex\ ist \LaTeXe\ (sprich "`LaTeX zwei e"'). 
-Zum Arbeiten mit \latex\ benötigt man zwei Dinge:
+Zum Arbeiten mit \latex wird -- neben einem Computer -- natürlich Software benötigt. Mussten früher oft die einzelnen Komponenten von \latex mühevoll zusammengesucht und für die eigene Umgebung konfiguriert werden, gibt es mittlerweile für die wichtigsten Plattformen (Windows, Mac~Os, Linux) fertige \latex-Installationen, die ohne weiteres Zutun laufen. Die aktuelle Version von \latex\ ist \LaTeXe\ (sprich "`LaTeX zwei e"'). 
+Zum Arbeiten mit \latex\ werden zwei Dinge benötigt:
 %
 \begin{itemize}
 \item \latex-Installation (Distribution),
@@ -121,7 +119,7 @@ In manchen gängigen Linux-Versionen ist bereits eine komplette \latex-Distribut
 \label{sec:literatur}
 
 Es ist müßig, ohne geeignete Literatur mit \latex zu beginnen, selbst
-als fortgeschrittener Benutzer wird man immer wieder auf Hilfe angewiesen
+fortgeschrittene Benutzer werden immer wieder auf Hilfe angewiesen
 sein. Erfreulicherweise ist sehr viel Nützliches auch online verfügbar.
 Gute Startpunkte sind \zB
 %
@@ -166,6 +164,8 @@ und die Beschreibungen wichtiger \latex-Pakete, wie
 
 \section{Schrift}
 
+In einem \latex-Dokument muss zunächst die verwendete Schriftart festgelegt werden. Im Text können dann mittels diverser Auszeichnungen Textstellen durch eine Änderung des Schriftstils hervorgehoben werden.
+
 \subsection{Schriftarten}
 
 \latex verwendet normalerweise die Schriften der \emph{Computer
@@ -176,9 +176,9 @@ wurden. Die drei Basis-Schrifttypen der CM-Serie in \latex sind
 %
 \begin{quote}
 \begin{tabular}{lcl}
-\textrm{Roman}      & & \verb!\textrm{Roman}!\\
-\textsf{Sans Serif} & & \verb!\textsf{Sans Serif}!\\
-\texttt{Typewriter} & & \verb!\texttt{Typewriter}!\\
+\textrm{Roman}      & & \verb!\textrm{Roman}!,\\
+\textsf{Sans Serif} & & \verb!\textsf{Sans Serif}!,\\
+\texttt{Typewriter} & & \verb!\texttt{Typewriter}!.\\
 \end{tabular}
 \end{quote}
 %
@@ -271,6 +271,8 @@ Ausnahmefällen verwendet werden, \zB
 
 \section{Textstruktur}
 
+Zur Strukturierung des eigenen Text stellt \latex eine Reihe von Auszeichnungen zur Verfügung.
+
 \subsection{Absatztrennung}
 
 Absätze werden in {\latex}-Quelltext ausschließlich durch das
@@ -305,17 +307,17 @@ machen. Dieses Schema hat sich nicht nur im traditionellen
 Buchsatz bewährt%
 \footnote{Wer es nicht glaubt, sollte sein Bücherregal (oder notfalls das seiner Eltern) nach Gegenbeispielen durchsuchen.}
 und sollte auch beibehalten werden, es sei denn
-man hat wirklich \emph{sehr} gute Gründe dagegen.
+es gibt wirklich \emph{sehr} gute Gründe dagegen.
 Für alle übrigen Gliederungen im vertikalen Textfluss sind Überschriften (s.\ unten) vorgesehen.
 
 \SuperPar 
-Manchmal besteht allerdings der Wunsch, etwa zur Verdeutlichung eines inhaltlichen Sprungs \emph{zwischen} zwei Absätzen einen zusätzlichen Abstand einzufügen, ohne dabei eine neue Überschrift zu setzen. Das kann man gegebenenfalls (wie vor dem aktuellen Absatz passiert) durch 
+Manchmal besteht allerdings der Wunsch, etwa zur Verdeutlichung eines inhaltlichen Sprungs \emph{zwischen} zwei Absätzen einen zusätzlichen Abstand einzufügen, ohne dabei eine neue Überschrift zu setzen. Das kann gegebenenfalls (wie vor dem aktuellen Absatz passiert) durch 
 %
 \begin{quote}
 \texttt{{\bs}SuperPar} \emph{Manchmal besteht allerdings der Wunsch, \ldots}
 \end{quote}
 %
-erreichen, sollte jedoch sehr sparsam und wirklich \textbf{nur in begründbaren Einzelfällen} verwendet werden.%
+erreicht werden, sollte jedoch sehr sparsam und wirklich \textbf{nur in begründbaren Einzelfällen} verwendet werden.%
 \footnote{Das Makro \texttt{{\bs}SuperPar} ist in \texttt{hgb.sty} definiert.}
 
 
@@ -346,8 +348,8 @@ verwendet.}
 \paragraph{Häufiger Fehler:} Bei \verb!\paragraph{}! und
 \verb!\subparagraph{}! läuft -- wie in diesem Absatz zu sehen --
 der dem Titel folgende Text ohne Umbruch in der selben Zeile
-weiter, weshalb man im Titel auf eine passende Interpunktion (hier
-\zB\ \underline{\texttt{:}}) achten sollte. Der horizontale Abstand
+weiter, weshalb im Titel auf eine passende Interpunktion (hier
+\zB\ \underline{\texttt{:}}) geachtet werden sollte. Der horizontale Abstand
 nach dem Titel allein würde diesen als Überschrift nicht erkennbar
 machen.
 
@@ -380,8 +382,8 @@ Abschlussarbeiten werden -- wie Bücher -- in der Regel einspaltig und
 im Blocksatz formatiert, was für den Fließtext wegen der großen
 Zeilenlänge vorteilhaft ist. Innerhalb von Tabellen kommt es
 wegen der geringen Spaltenbreite jedoch häufig zu Problemen mit
-Abteilungen und Blocksatz, weshalb man dort ohne schlechtes
-Gewissen zum Flattersatz ("`ragged right"') greifen sollte (wie
+Abteilungen und Blocksatz, weshalb dort ohne schlechtes
+Gewissen zum Flattersatz ("`ragged right"') gegriffen werden sollte (wie
 \zB\ in Tab.~\ref{tab:synthesis-techniques} auf Seite
 \pageref{tab:synthesis-techniques}).
 
@@ -412,7 +414,7 @@ zwei aufeinanderfolgende Seiten umgebrochen.
 
 \subsubsection{Fußnoten in Überschriften}
 
-Auch das braucht man ab und zu, ist aber \va\ deshalb kein so
+Auch das ist ab und zu nötig, ist aber \va\ deshalb kein so
 einfacher Fall, weil die Fußnote in einer Überschrift nur an Ort
 und Stelle aufscheinen darf, nicht aber im \emph{Inhaltsverzeichnis}! Ein
 konkretes Beispiel dafür ist die Überschrift zu
@@ -434,12 +436,12 @@ enthält auch den \verb!\footnote{}! Eintrag, der allerdings an
 dieser Stelle durch die Direktive \verb!\protect! "`geschützt"'
 werden muss. Die \verb!%!-Zeichen sind hier übrigens notwendig,
 um eventuelle Leerzeichen, die durch Zeilenumbrüche im Quelltext
-entstehen, zu eliminieren (diesen Trick braucht man 
-in \latex\ häufig, s.\ Abschn.~\ref{sec:kommentare}). 
+entstehen, zu eliminieren (dieser Trick wird 
+in \latex\ häufig benötigt, s.\ Abschn.~\ref{sec:kommentare}). 
 Ziemlich kompliziert also, und damit 
 ein weiterer Grund, Fußnoten an solchen Stellen überhaupt zu vermeiden.
 
-Generell sollte man mit Fußnoten sparsam umgehen, da sie den
+Generell sollte mit Fußnoten sparsam umgegangen werden, da sie den
 Textfluss unterbrechen und den Leser ablenken. Insbesondere
 sollten Fußnoten nicht (wie \va\ in manchen
 sozialwissenschaftlichen Werken gepflegt) derart lang werden, dass
@@ -507,24 +509,27 @@ ausschließlich "`ungebrochene"' Nummern:
 
 \section{Wortabstand und Interpunktion}
 
+Während \latex in vielen Bereichen des Schriftsatzes automatisch das bestmögliche Ergebnis zu erzielen versucht, ist im Bereich der Interpunktion Sorgfalt von Seiten des Autors gefragt.
+
 \subsection{\emph{French Spacing}}
+
 Im englischsprachigen Schriftsatz ist es üblich, nach jedem
 Satzende einen gegenüber dem normalen Wortzwischenraum
 vergrößerten Abstand einzusetzen. Obwohl dies im Deutschen und
 Französischen traditionell nicht so ist, wird es wegen der
 verbesserten Lesbarkeit auch hier manchmal verwendet (nicht in diesem
-Dokument). Falls man die englische ("`nicht-französische"') Satztrennung mit
-zusätzlichem Abstand bevorzugt, ist lediglich die Zeile
+Dokument). Falls die englische ("`nicht-französische"') Satztrennung mit
+zusätzlichem Abstand bevorzugt wird, ist lediglich die Zeile
 %
 \begin{quote}
 \verb!\nonfrenchspacing!
 \end{quote}
 %
 am Beginn des Dokuments einzusetzen. 
-In diesem Fall sollte man 
+In diesem Fall sollte 
 aber die Interpunktion innerhalb von
-Sätzen (nach .\ und :) sorgfältig beachten. Beispielsweise
-schreibt man "`Dr.\ Mabuse"' in der Form
+Sätzen (nach .\ und :) sorgfältig beachtet weren. Beispielsweise
+schreibt sich "`Dr.\ Mabuse"' in der Form
 %
 \begin{quote}
 \verb!Dr.\ Mabuse! oder \verb!Dr.~Mabuse!
@@ -538,7 +543,7 @@ Im zweiten Beispiel wird mit dem \verb!~! Zeichen zudem ein Zeilenumbruch am Lee
 
 Die Verwendung der falschen Strichlängen (mit und ohne
 Zwischenraum) ist ganz allgemein eine häufige Fehlerquelle.
-Bewusst unterscheiden sollte man zwischen
+Bewusst unterschieden werden sollte zwischen
 %
 \begin{itemize}
 \item kurzen Bindestrichen (wie in "`Wagner-Jauregg"'), %
@@ -551,16 +556,16 @@ drei gibt es übrigens auch in \emph{Word} entsprechende
 Sonderzeichen.} gibt es eindeutige Konventionen:
 %
 \begin{enumerate}
-\item Im \emph{Deutschen} setzt man üblicherweise einen von zwei
-Leerzeichen umgebenen Gedankenstrich%
+\item Im \emph{Deutschen} wird üblicherweise einer von zwei
+Leerzeichen umgebener Gedankenstrich%
 \footnote{Halbgeviertstrich (\emph{En Dash}).} -- wie hier (in
-\latex\ mit {\verb*! -- !}). Dieser wird auch für die Angabe von
+\latex\ mit {\verb*! -- !}) gesetzt. Dieser wird auch für die Angabe von
 Zahlenintervallen (Seiten 12--19) benutzt. 
 %
-\item In \emph{englischen} Texten verwendet man einen noch längeren
+\item In \emph{englischen} Texten wird ein noch längerer
 Gedankenstrich\footnote{Geviertstrich (\emph{Em Dash}).} \emph{ohne}
 zusätzliche Leerzeichen---\emph{as we should be knowing by now}
-(in \latex\ mit {\verb*!---!}).
+(in \latex\ mit {\verb*!---!}) verwendet.
 %
 \end{enumerate}
 
@@ -580,8 +585,8 @@ Textteile können in \latex\ zeilenweise mit \verb!%! auskommentiert werden. Der
 %
 Häufig verwendet werden Kommentarzeichen aber auch zum Ausblenden von 
 \emph{white space}, also Leerzeichen und Zeilenumbrüchen.
-Folgendes Beispiel zeigt etwa, wie man mit \verb!%! am Zeilenende das Entstehen
-eines Leerzeichens vor einer nachfolgenden Fußnotenmarke vermeiden kann:
+Folgendes Beispiel zeigt etwa, wie mit \verb!%! am Zeilenende das Entstehen
+eines Leerzeichens vor einer nachfolgenden Fußnotenmarke vermieden werden kann:
 %
 \begin{quote}
 \begin{verbatim}
@@ -593,8 +598,8 @@ In Österreich isst man sonntags Schnitzel.%
 
 \begin{sloppypar}
 \noindent
-Auf ähnliche Weise kann man das Entstehen von ungewolltem Absatz\-zwischenraum durch 
-gezielten Einsatz von Kommentarzeilen vermeiden, \zB\ vor und nach einem zentrierten
+Auf ähnliche Weise kann das Entstehen von ungewolltem Absatz\-zwischenraum durch 
+gezielten Einsatz von Kommentarzeilen vermieden werden, \zB\ vor und nach einem zentrierten
 Textabschnitt:
 \end{sloppypar}
 %
@@ -628,8 +633,8 @@ Dieser Text ...
 \subsection{Anführungszeichen}
 \label{sec:anfuehrungszeichen}
 
-Mit Anführungszeichen geht man aus Gewohnheit meist etwas
-nachlässig um; auch dabei sind aber die Unterschiede zwischen Deutsch
+Mit Anführungszeichen wird aus Gewohnheit meist etwas
+nachlässig umgegangen; auch dabei sind aber die Unterschiede zwischen Deutsch
 und Englisch zu beachten. Hier die richtige \latex-Notation für
 beide Sprachen:
 %
@@ -640,7 +645,7 @@ beide Sprachen:
 %
 Bei richtiger Einstellung werden beispielsweise im TeXnicCenter-Editor
 die entsprechenden Zeichenfolgen automatisch eingesetzt.
-\emph{Einfache} Anführungszeichen erzeugt man im Englischen analog, im Deutschen benötigt man dafür die Makros \verb!\glq! \bzw\ \verb!\grq! (German left/right quote):
+\emph{Einfache} Anführungszeichen werden im Englischen analog erzeugt, im Deutschen werden dafür die Makros \verb!\glq! \bzw\ \verb!\grq! (German left/right quote) benötigt:
 \begin{quote}
 \verb!`English'! $\rightarrow$ `English' \\
 \verb!{\glq}Deutsch{\grq}! $\rightarrow$ {\glq}Deutsch{\grq} 
@@ -669,7 +674,7 @@ Besonders bei schmalen Textspalten kann es vorkommen, dass \latex
 keine geeignete Stelle für den Zeilenumbruch findet und den Text
 über den rechten Rand hinaus laufen lässt. Das ist durchaus
 beabsichtigt und soll anzeigen, dass an dieser Stelle ein Problem
-besteht, das man durch manuelles Eingreifen reparieren muss.
+besteht, das durch manuelles Eingreifen repariert werden muss.
 
 
 
@@ -682,8 +687,8 @@ oft unrichtig abgeteilt.
 
 
 \paragraph{Optionale Zeilenumbrüche:} 
-Bei Bedarf kann man mit \verb!\-! gezielt zulässige Abteilungspunkte 
-definieren, wie \zB\ in
+Bei Bedarf können mit \verb!\-! gezielt zulässige Abteilungspunkte 
+definiert werden, wie \zB\ in
 %
 \begin{itemize}
 \item[] \verb!Fach\-hoch\-schul\-kon\-fe\-renz!.
@@ -698,8 +703,8 @@ beispielsweise würde \latex\ \emph{keinen} der beiden Teile des Worts
 \item[] \verb!Arbeiter-Unfallversicherungsgesetz!
 \end{itemize}
 automatisch trennen, sondern ggfs.\ ungebrochen über den Zeilenrand hinausragen
-lassen! Auch hier kann man sich natürlich (wie oben gezeigt) durch individuelles 
-Einsetzen von \verb!\-! helfen. Eine generelle Lösung bietet das (ohnehin bereits
+lassen! Auch hier kann natürlich (wie oben gezeigt) durch individuelles 
+Einsetzen von \verb!\-! Abhilfe geschaffen werden. Eine generelle Lösung bietet das (ohnehin bereits
 geladene) \texttt{babel}-Paket%
 \footnote{\url{http://www.ctan.org/tex-archive/language/german/gerdoc.pdf}} in der Form
 \begin{itemize}
@@ -711,8 +716,8 @@ und auch so umbricht.
 
 \paragraph{"`Schlampige"' Formatierung:}
 In echten Problemfällen -- etwa bei Textelementen, die nicht umgebrochen 
-werden dürfen oder können -- kann man \latex\ dazu veranlassen, in einzelnen Absätzen
-etwas weniger pingelig zu formatieren. Das erreicht man durch
+werden dürfen oder können -- kann \latex\ dazu veranlasst werden, in einzelnen Absätzen
+etwas weniger pingelig zu formatieren. Das wird wie folgt erreicht:
 %
 \begin{itemize}
 \item[]
@@ -902,8 +907,8 @@ folgenden Einstellungen am Beginn des Dokuments bestimmt werden:
 	(\emph{Alle Rechte vorbehalten} \bzw\ \emph{All Rights Reserved}).
 \item[\normalfont\texttt{{\bs}license\{\emph{Lizenztext}\}}] ~ \newline
 	Damit kann alternativ ein eigener \texttt{\emph{Lizenztext}} angegeben werden, 
-	falls notwendig. Solche Änderungen sollte man natürlich unbedingt mit seiner 
-	Hochschule abstimmen.
+	falls notwendig. Solche Änderungen sollten natürlich unbedingt mit seiner 
+	Hochschule abgestimmt werden.
 \end{description}
 
 
@@ -920,8 +925,8 @@ Zwisch\-en\-ab\-stän\-de sorgen (Tab.~\ref{tab:abkuerzungen}).
 Bei der Verwendung von Makros ist allgemein zu beachten, dass sie nachfolgende Leerzeichen manchmal
 "`auffressen"', sodass vor dem nachfolgenden Text kein Abstand erzeugt wird.%
 \footnote{Bei fast allen in \texttt{hgb.sty} definierten Makros wird dies allerdings durch den Einsatz von \texttt{\textbackslash xspace} verhindert.} 
-Dagegen kann man sich notfalls mit einem nachfolgenden
-"`\verb!\ !"' oder umhüllenden \verb!{}!-Klammern behelfen.
+Dies kann notfalls mit einem nachfolgenden
+"`\verb!\ !"' oder umhüllenden \verb!{}!-Klammern verhindert werden.
 %, wie in folgendem (nicht sehr schönen) Beispiel:
 %
 %\begin{itemize}
@@ -929,7 +934,7 @@ Dagegen kann man sich notfalls mit einem nachfolgenden
       %Mopeds und Autos haben \ia zwei {\bzw} vier Räder.
 %\end{itemize}
 Bei Verwendung von Makros mit abschließendem Punkt an einem Satzende 
-sollte man auch darauf achten, dass keine \emph{doppelten} Punkte gesetzt werden.
+sollte auch darauf geachtet werden, dass keine \emph{doppelten} Punkte gesetzt werden.
 
 
 \begin{table}
@@ -962,8 +967,8 @@ sollte man auch darauf achten, dass keine \emph{doppelten} Punkte gesetzt werden
 Für englischsprachige Abschnitte (\zB\ das Abstract oder englische
 Zitate) sollte die \emph{Sprache} von Deutsch auf Englisch
 umgeschaltet werden, um die richtige Form der Silbentrennung zu
-erhalten. Damit man nicht versehentlich auf das Rückstellen der
-Sprache vergisst, sind dafür im \texttt{hagenberg}-Paket zwei
+erhalten. Damit nicht versehentlich auf das Rückstellen der
+Sprache vergessen wird, sind dafür im \texttt{hagenberg}-Paket zwei
 spezielle \emph{Environments} vorgesehen:
 %
 \begin{itemize}
@@ -994,7 +999,7 @@ zusätzlichen \latex-Paketen erforderlich
 durch das \texttt{hagenberg}-Paket automatisch geladen. 
 Alle verwendeten Pakete sind
 Teil der \latex\ Standard-Installation, wie \zB in MikTeX, wo
-man auch entsprechende Dokumentation findet (meist als DVI-Dateien).
+auch entsprechende Dokumentation gefunden werden kann (meist als DVI-Dateien).
 Die aktuellen Versionen der Pakete sind online verfügbar, \ua\ auf den
 in Abschn.~\ref{sec:literatur} angegebenen CTAN-Sites.
 
@@ -1070,7 +1075,7 @@ Bei kapitalen Fehlern bleibt der \latex-Prozessor überhaupt stehen und
 erzeugt keine Ausgabe (in Verbindung mit einer meist kryptischen
 Fehlermeldung) -- hier hilft meist nur eine genaue
 Analyse des Quelltexts oder der gerade zuvor durchgeführten Schritte.
-Ein ausführliches Fehlerprotokoll findet man jeweils in der \verb!.log!-Datei 
+Ein ausführliches Fehlerprotokoll findet sich jeweils in der \verb!.log!-Datei 
 des Hauptdokuments.
 
 Falls keine Fehler mehr angezeigt werden, ist zumindest die syntaktische Struktur
