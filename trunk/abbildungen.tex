@@ -37,12 +37,11 @@ nicht zu weit von der ursprünglichen Textstelle zu entfernen.
 Der Gedanke, dass etwa Abbildungen kaum jemals genau an der
 ge\-wünsch\-ten Stelle und möglicherweise nicht einmal auf
 derselben Seite Platz finden, ist für viele Anfänger aber offenbar sehr
-ungewohnt oder sogar beängstigend. Dennoch sollte man zunächst einmal
+ungewohnt oder sogar beängstigend. Dennoch sollte zunächst einmal
 getrost \latex\ diese Arbeit überlassen und \emph{nicht} manuell
-eingreifen. Erst am Ende, wenn das gesamte Dokument "`steht"' und
-man mit der automatischen Platzierung wirklich nicht zurande
-kommt, sollte man (durch gezielte Platzierungsanweisungen
-\cite[S.~49]{Oetiker2014}) \textbf{in Einzelfällen} eingreifen.
+eingegriffen werden. Erst am Ende, wenn das gesamte Dokument "`steht"' und
+die automatische Platzierung wirklich nicht zufriedenstellend erscheint, sollte (durch gezielte Platzierungsanweisungen
+\cite[S.~49]{Oetiker2014}) \textbf{in Einzelfällen} eingegriffen werden.
 
 
 
@@ -130,7 +129,7 @@ in folgenden Formaten eingebunden werden:
 %
 Bei Rasterbildern sollte wenn möglich PNG verwendet werden, weil die darin 
 enthaltenen Bilder verlustfrei komprimiert sind und daher keine sichtbaren Kompressionsartefakte
-aufweisen. Im Gegensatz dazu sollte man JPEG nur dann verwenden, wenn das Originalmaterial
+aufweisen. Im Gegensatz dazu sollte JPEG nur dann verwendet werden, wenn das Originalmaterial
 (Foto) bereits in dieser Form vorliegt.
 
 
@@ -146,9 +145,9 @@ am Beginn des Hauptdokuments \nolinkurl{_DaBa.tex} (\sa\ Anhang \ref{app:latex})
 \end{quote}
 %
 Der (zum Hauptdokument relative) Pfad \texttt{graphicspath} kann innerhalb des
-Dokuments jederzeit geändert werden, was durchaus nützlich ist, wenn man
+Dokuments jederzeit geändert werden, was durchaus nützlich ist, wenn
 \zB\ die Grafiken einzelner Kapitel getrennt in entsprechenden Verzeichnissen
-ablegen möchte.
+abgelegt werden sollen.
 Die Größe der Abbildung im Druck kann durch Vorgabe einer bestimmten
 Breite oder Höhe oder eines Skalierungsfaktors gesteuert werden, {\zB}:
 %
@@ -158,25 +157,25 @@ Breite oder Höhe oder eines Skalierungsfaktors gesteuert werden, {\zB}:
 \end{quote}
 %
 Man beachte, dass dabei die Dateiendung nicht explizit angegeben werden muss. 
-Das ist \va\ dann praktisch, wenn man verschiedene Workflows mit jeweils
-unterschiedlichen Dateitypen verwendet.
+Das ist \va\ dann praktisch, wenn verschiedene Workflows mit jeweils
+unterschiedlichen Dateitypen verwendet werden.
 
 
 \subsection{Grafiken einrahmen} 
 
-Mit dem Makro \verb!\FramePic{}! (definiert in \texttt{hgb.sty}) kann man optional einen dünnen 
-Rahmen rund um die Grafik erzeugen, \zB:
+Mit dem Makro \verb!\FramePic{}! (definiert in \texttt{hgb.sty}) kann optional ein dünner 
+Rahmen rund um die Grafik erzeugt werden, \zB:
 %
 \begin{quote}
 \verb!\FramePic{\includegraphics[height=50mm]{ibm-360-color}}!
 \end{quote}
 %
-Das wird man üblicherweise nur bei Rasterbildern tun, insbesondere wenn sie zum Rand hin sehr hell sind
+Das wird üblicherweise nur bei Rasterbildern nötig sein, insbesondere wenn sie zum Rand hin sehr hell sind
 und ohne Rahmen nicht vom Hintergrund abgrenzbar wären.
 
 \subsection{Rasterbilder (Pixelgrafiken)}
 
-Generell sollte man Bilder bereits vorher so aufbereiten,
+Generell sollten Bilder bereits vorher so aufbereitet werden,
 dass sie später beim Druck möglichst wenig an Qualität verlieren.
 Es empfiehlt sich daher, die Bildgröße (Auflösung) bereits im Vorhinein
 (\zB mit \emph{Photoshop})
@@ -190,21 +189,21 @@ Brauchbare Auflösungen bezogen auf die endgültige Bildgröße sind:
 %
 Eine wesentlich höhere Auflösung macht aufgrund der beim Laserdruck notwendigen
 Rasterung keinen Sinn, auch bei 1200 dpi-Druckern.
-Speziell \emph{Screen\-shots} sollte man nicht zu klein darstellen,
+Speziell \emph{Screen\-shots} sollten nicht zu klein dargestellt werden,
 da sie sonst schlecht lesbar sind (max.\ 200 dpi, besser 150 dpi).
 Dabei ist zu bedenken, dass die Arbeit auch als Kopie in allen
 Details noch gut lesbar sein sollte.
 
 \subsubsection{JPEG-Problematik}
 
-In der Regel sollte man Bilder, die für den Einsatz in
+In der Regel sollten Bilder, die für den Einsatz in
 Druckdokumenten gedacht sind, nicht mit verlustbehafteten
-Kompressionsverfahren abspeichern. Insbesondere sollte man die Verwendung
-von JPEG möglichst vermeiden, auch wenn viele Dateien dadurch
+Kompressionsverfahren abgespeichert werden. Insbesondere sollte die Verwendung
+von JPEG möglichst vermieden werden, auch wenn viele Dateien dadurch
 wesentlich kleiner werden. 
 Eine Ausnahme ist, wenn die Originaldaten nur in JPEG vorliegen und für die 
-Einbindung nicht bearbeitet oder verkleinert wurden. Ansonsten sollte man immer
-PNG verwenden.
+Einbindung nicht bearbeitet oder verkleinert wurden. Ansonsten sollte immer
+PNG verwendet werden.
 
 Besonders gerne werden farbige \textbf{Screenshots} einer JPEG-Kompression%
 \footnote{Das JPEG-Verfahren ist für natürliche Fotos konzipiert und dafür auch gut geeignet,
@@ -232,25 +231,25 @@ im Druck auch schnell unleserlich.}
 \subsection{Vektorgrafiken}
 
 Für schematische Abbildungen (\zB Flussdiagramme, Entity-Relationship-Diagramme
-oder sonstige strukturelle Darstellungen) sollte man unbedingt
-Vektorgrafiken (PDF) verwenden. % (\zB Abb.~\ref{fig:latex-pdf-workflow}).
-Gerasterte Grafiken, wie man sie üblicherweise als GIF- oder PNG-Dateien
-auf Webseiten findet, haben in einem Druckdokument nichts zu suchen, notfalls
-muss man sie mit einem entsprechenden Werkzeug \emph{neu} zeichnen (natürlich
+oder sonstige strukturelle Darstellungen) sollten unbedingt
+Vektorgrafiken (PDF) verwendet werden. % (\zB Abb.~\ref{fig:latex-pdf-workflow}).
+Gerasterte Grafiken, wie sie üblicherweise als GIF- oder PNG-Dateien
+auf Webseiten vorliegen, haben in einem Druckdokument nichts zu suchen, notfalls
+müssen sie mit einem entsprechenden Werkzeug \emph{neu} gezeichnet werden (natürlich
 unter Angabe der ursprünglichen Quelle).
 
 In diesem Fall kommt als Datenformat nur PDF %(oder EPS im DVI-PS-Workflow) 
 in Frage,
 dieses bietet sich aber auch in anderen Umgebungen als universelles
 Vektor-Format an.
-Zur Erstellung von PDF-Vektorgrafiken benötigt man ein geeignetes
-Grafikprogramm, \zB\ \emph{Freehand} %von \emph{Macromedia}
-oder \emph{Illustrator} von \emph{Adobe}.
-Manche gängige Grafikprogramme 
+Zur Erstellung von PDF-Vektorgrafiken wird ein geeignetes
+Grafikprogramm, \zB\ %\emph{Freehand} von \emph{Macromedia} oder
+\emph{Illustrator} von \emph{Adobe} benötigt.
+Manche gängigen Grafikprogramme 
 unterstützen allerdings keinen direkten Export von PDF-Dateien
 oder erzeugen unsaubere Dateien. Vor der Entscheidung
-für eine bestimmte Zeichensoftware sollte man das im Zweifelsfall
-ausprobieren.
+für eine bestimmte Zeichensoftware sollte das im Zweifelsfall
+ausprobiert werden.
 PDF kann im Notfall über einen entsprechenden Druckertreiber erzeugt werden.
 
 
@@ -287,9 +286,9 @@ Strichstärken ($\geq 0.25\,\mathrm{pt}$) einstellen!
 \subsection{\tex-Schriften auch in Grafiken?}
 \label{sec:tex-schriften-in-grafiken}
 
-Während man sich bei Abbildungen, die mit externen
-Grafik-Programmen erzeugt werden, meist mit ähnlich aussehenden
-Schriften (wie \emph{Times-Roman} oder \emph{Garamond}) abhilft,
+Während bei Abbildungen, die mit externen
+Grafik-Programmen erzeugt werden, meist mit ähnlich aussehende
+Schriften (wie \emph{Times-Roman} oder \emph{Garamond}) Abhilfe schaffen,
 besteht bei Puristen oft der verständliche Wunsch, die 
 \emph{Computer-Modern} (CM) Schriftfamilie von {\tex}/{\latex} auch
 innerhalb von eingebetteten Grafiken einzusetzen.
@@ -297,11 +296,11 @@ innerhalb von eingebetteten Grafiken einzusetzen.
 \subsubsection{\emph{BaKoMa}-Schriften (TrueType)}
 
 Glücklicherweise stehen einige Portierungen von CM als {\em
-TrueType}-Schriften zur Verfügung, die man auch in herkömmlichen
-DTP-Anwendungen unter \emph{Windows} und \emph{Mac~OS} verwenden
-kann. Empfehlenswert ist \zB\ die \emph{BaKoMa Fonts
+TrueType}-Schriften zur Verfügung, die auch in herkömmlichen
+DTP-Anwendungen unter \emph{Windows} und \emph{Mac~OS} verwendet werden
+können. Empfehlenswert ist \zB\ die \emph{BaKoMa Fonts
 Collection}\footnote{Von Basil K.\ Malyshev -- die BaKoMa-Fonts
-liegen dieser Vorlage bei, ansonsten findet man sie \zB\ unter
+liegen dieser Vorlage bei, ansonsten finden sie sich \zB\ unter
 \url{www.ctan.org/tex-archive/fonts/cm/ps-type1/bakoma/}.}, die
 neben den CM-Standardschriften auch die mathematischen Schriften
 der AMS-Familie ent\-hält und zudem kostenfrei ist. Natürlich
@@ -387,7 +386,7 @@ Weitere Details finden sich im Quelltext.
 \subsection{Abbildungen mit mehreren Elementen}
 
 Werden mehrere Bilder oder Grafiken zu einer Abbildung zusammengefasst, 
-verwendet man üblicherweise eine gemeinsame Caption, wie in Abb.~\ref{fig:Bearings}
+wird üblicherweise eine gemeinsame Caption verwendet, wie in Abb.~\ref{fig:Bearings}
 dargestellt. Im Text könnte ein Verweis auf einen einzelnen Teil der Abbildung, etwa das 
 einreihige Rollenlager in Abb.~\ref{fig:Bearings}\,(c), so aussehen:
 %
@@ -395,8 +394,8 @@ einreihige Rollenlager in Abb.~\ref{fig:Bearings}\,(c), so aussehen:
 \item[] \verb!Abb.~\ref{fig:Bearings}\,(c)! 
 \end{itemize}
 %
-Für kompliziertere Abbildungen sollte man die Verwendung des 
-\texttt{subfig}-Pakets \cite{Cochran05} in Betracht ziehen.
+Für kompliziertere Abbildungen sollte die Verwendung des 
+\texttt{subfig}-Pakets \cite{Cochran05} in Betracht gezogen werden.
 
 
 \subsection{Quellenangaben in Captions}
@@ -405,10 +404,10 @@ Für kompliziertere Abbildungen sollte man die Verwendung des
 Wenn Bilder, Grafiken oder Tabellen aus anderen Quellen verwendet werden, dann 
 muss ihre Herkunft in jedem Fall klar ersichtlich gemacht werden, und zwar am 
 besten direkt in der Caption.
-Verwendet man beispielsweise eine Grafik aus einem Buch oder einer sonstigen 
-zitierfähigen Publikation, dann sollte man diese in das Literaturverzeichnis 
-aufnehmen und wie üblich mit
-\verb!\cite{..}! zitieren, wie in Abb.\ \ref{fig:Bearings} demonstriert. 
+Wird beispielsweise eine Grafik aus einem Buch oder einer sonstigen 
+zitierfähigen Publikation verwendet, dann sollte diese in das Literaturverzeichnis 
+aufgenommen und wie üblich mit
+\verb!\cite{..}! zitiert werden, wie in Abb.\ \ref{fig:Bearings} demonstriert. 
 Weitere Details zu dieser Art von Quellenangaben finden sich in 
 Kap.\ \ref{cha:Literatur} (insbes.\ Abschnitt \ref{sec:KategorieOnline}).
 
@@ -684,8 +683,8 @@ gibt es grundsätzlich drei Möglichkeiten zur Einbindung von Programmtext:
 
 \subsubsection{Programmtext im laufenden Text}
 
-Kurze Codesequenzen kann man ohne weiteres im laufenden Text
-einbetten, sofern sie an den gegebenen Stellen von unmittelbarer
+Kurze Codesequenzen können ohne weiteres im laufenden Text
+eingebettet werden, sofern sie an den gegebenen Stellen von unmittelbarer
 Bedeutung sind. Die folgende (rudimentäre) Java-Methode {\tt
 extractEmail} sucht nach einer E-Mail Adresse in der Zeichenkette
 \texttt{line}:
@@ -726,9 +725,9 @@ nach Möglichkeit nicht durch Seitenumbrüche geteilt werden.
 
 \subsubsection{Programmtexte als Float-Elemente}
 Sind längere Codesequenzen notwendig, die in unmittelbarer Nähe des laufenden Texts
-stehen müssen, sollte man diese genauso wie andere Abbildungen als Float-Elemente
-behandeln. Diese Programmtexte sollten den Umfang von einer Seite nicht übersteigen.
-Im Notfall kann man auch bis zu zwei Seiten in aufeinanderfolgende Abbildungen packen,
+stehen müssen, sollten diese genauso wie andere Abbildungen als Float-Elemente
+behandelt werden. Diese Programmtexte sollten den Umfang von einer Seite nicht übersteigen.
+Im Notfall können auch bis zu zwei Seiten in aufeinanderfolgende Abbildungen gepackt werden,
 jeweils mit eigener Caption. In \texttt{hgb.sty} ist eine neue Float-Umgebung \texttt{program} definiert, die analog zu \texttt{table} verwendet wird:
 %
 \begin{quote}
@@ -745,10 +744,10 @@ jeweils mit eigener Caption. In \texttt{hgb.sty} ist eine neue Float-Umgebung \t
 \end{verbatim}
 \end{quote}
 %
-Wenn man möchte, kann man in diesem Fall die Caption auch unten anbringen 
+Wenn gewünscht, kann die Caption auch unten angebracht werden 
 (jedenfalls aber konsistent und nicht gemischt).
-Natürlich darf man auch hier nicht mit einer linearen Abfolge im fertigen
-Druckbild rechnen, daher sind Wendungen wie
+Natürlich darf auch hier nicht mit einer linearen Abfolge im fertigen
+Druckbild gerechnet werden, daher sind Wendungen wie
 "`... im  folgenden Programmstück ..."' zu vermeiden und entsprechende Verweise
 einzusetzen. Beispiele sind Programme \ref{prog:processors-source} und \ref{prog:CodeExample}.
 
@@ -791,14 +790,14 @@ public class My_Inverter implements PlugInFilter {
 
 Für längere Programmtexte, speziell wenn sie vollständige
 Implementierungen umfassen und im aktuellen Kontext nicht
-unmittelbar relevant sind, muss man zur Ablage in einem getrennten
-Anhang am Ende des Dokuments greifen. Für Hinweise auf bestimmte
-Details kann man entweder kurze Ausschnitte in den laufenden Text
-stellen oder mit entsprechenden Seitenverweisen arbeiten. Ein
+unmittelbar relevant sind, muss zur Ablage in einem getrennten
+Anhang am Ende des Dokuments gegriffen werden. Für Hinweise auf bestimmte
+Details können entweder kurze Ausschnitte in den laufenden Text
+gestellt oder mit entsprechenden Seitenverweisen gearbeitet werden. Ein
 solches Beispiel ist der \latex-Quellcode in Anhang
 \ref{app:latex} (Seite \pageref{app:latex}).%
 \footnote{%
 Grundsätzlich ist zu überlegen, ob die gedruckte Einbindung der gesamten
 Programmtexte einer Implementierung für den Leser überhaupt sinnvoll ist, oder
-ob man diese nicht besser elektronisch (auf CD-ROM) beifügt und nur exemplarisch
-beschreibt.}
+ob diese nicht besser elektronisch (auf Datenträger) beifügt und nur exemplarisch
+beschrieben werden.}

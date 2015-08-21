@@ -26,7 +26,7 @@ Objektiv auf die Entfernung $\bar{a}$ (\dah, $a_0 = \bar{a}$), dann wird
 im Bereich $[\frac{\bar{a}}{2}, \infty]$ alles scharf.
 \end{quote}
 %
-Dabei sollte man unbedingt darauf achten, dass die Höhe der einzelnen Elemente im Text nicht zu groß wird. 
+Dabei sollte unbedingt darauf geachtet werden, dass die Höhe der einzelnen Elemente im Text nicht zu groß wird. 
 
 \paragraph{Häufiger Fehler:} 
 Im Fließtext wird bei einfachen Variablen oft auf die Verwendung der richtigen, mathematischen Zeichen vergessen, wie etwa in 
@@ -40,7 +40,7 @@ Freigestellte mathematische Ausdrücke können in \latex\ im einfachsten Fall du
 
 \subsection{Einfache Gleichungen} 
 
-Meistens verwendet man in solchen Fällen jedoch die \texttt{equation}-Umgebung zur Herstellung numerierter Gleichungen, auf die man im Text jederzeit verweisen kann. Zum Beispiel erzeugt
+Meistens wird in solchen Fällen jedoch die \texttt{equation}-Umgebung zur Herstellung numerierter Gleichungen verwendet, auf die im Text jederzeit verwiesen werden kann. Zum Beispiel erzeugt
 %
 \begin{LaTeXCode}[numbers=none]
 \begin{equation}
@@ -57,7 +57,7 @@ die Gleichung
 \end{equation}
 %
 Mit \verb!\ref{eq:MyFirstEquation}! erhält man wie üblich die Nummer (\ref{eq:MyFirstEquation}) dieser Gleichung (siehe dazu auch Abschn.\ \ref{sec:VerweiseAufGleichungen}). 
-Dieselbe Gleichung \emph{ohne} Numerierung kann man übrigens mit der \texttt{equation*}-Umgebung erzeugen.
+Dieselbe Gleichung \emph{ohne} Numerierung kann übrigens mit der \texttt{equation*}-Umgebung erzeugt werden.
 
 
 
@@ -157,8 +157,8 @@ das mit den folgenden Anweisungen erzeugt wurde:
 \end{equation}
 \end{LaTeXCode}
 %
-Ein nützliches Detail darin ist das \tex-Makro \verb!\phantom{..}! (in Zeile \ref{lin:phantom}), das sein Argument unsichtbar einfügt und hier als Platzhalter für das darüberliegende Minuszeichen verwendet wird. Alternativ zu \texttt{pmatrix} kann man mit der \texttt{bmatrix}-Umgebung Matrizen
-und Vektoren mit eckigen Klammern erzeugen.
+Ein nützliches Detail darin ist das \tex-Makro \verb!\phantom{..}! (in Zeile \ref{lin:phantom}), das sein Argument unsichtbar einfügt und hier als Platzhalter für das darüberliegende Minuszeichen verwendet wird. Alternativ zu \texttt{pmatrix} kann mit der \texttt{bmatrix}-Umgebung Matrizen
+und Vektoren mit eckigen Klammern erzeugt werden.
 Zahlreiche weitere mathematische Konstrukte des \texttt{amsmath}-Pakets sind in \cite{amsldoc02} beschrieben.
 
 \begin{comment}
@@ -193,9 +193,9 @@ der entsprechenden Nummer in runden Klammern,
 %"`\ldots\ wie aus (\ref{eq:f1}) abgeleitet werden kann \ldots"'
 "`\ldots\ wie aus (\ref{eq:f1}) abgeleitet werden kann \ldots"'
 \end{center}
-Um Missverständnisse zu vermeiden, sollte man aber -- \va\ in Texten mit
+Um Missverständnisse zu vermeiden, sollte aber -- \va\ in Texten mit
 nur wenigen mathematischen Elementen -- "`Gleichung \ref{eq:f1}"', "`Gl.~\ref{eq:f1}"' 
-oder "`Gl.~(\ref{eq:f1})"' schreiben (natürlich konsistent). 
+oder "`Gl.~(\ref{eq:f1})"' geschrieben werden (natürlich konsistent). 
 %\emph{Falsch} wäre hingegen "`Gleichung (\ref{eqn:zerstreuungskreis})"'.
 
 \begin{center}
@@ -211,6 +211,8 @@ meistens ein Fehler in der Anordnung gemacht.
 
 
 \section{Spezielle Symbole}
+
+Für einen Großteil der mathematischen Symbole werden spezielle Makros benötigt. Im Folgenden werden einige der gebräuchlichsten aufgelistet.
 
 \subsection{Zahlenmengen}
 Einige häufig verwendete Symbole sind leider im ursprünglichen
@@ -231,7 +233,7 @@ $x \in \R$ , $k \in \N_0$, $z = (a + \mathrm{i} \cdot b) \in \Cpx$.
 In \latex\ sind Dutzende von mathematischen Operatoren für spezielle Anwendungen definiert. Am häufigsten werden natürlich die arithmetischen Operatoren $+$, $-$, $\cdot$ und $/$ benötigt. Ein dabei oft beobachteter Fehler (der wohl aus der Programmierpraxis resultiert) ist die Verwendung von $*$ für die einfache Multiplikation -- richtig ist $\cdot$ (\verb!\cdot!).%
 \footnote{Das Zeichen $*$ wird üblicherweise für den Faltungsoperator verwendet.}
 %
-Für Angaben wie \zB\ "`ein Feld mit $25 \times 70$ Metern"' (aber auch fast \emph{nur} dafür) verwendet man sinnvollerweise den $\times$ (\verb!\times!) Operator und \emph{nicht} einfach das Textzeichen~"`x"'!
+Für Angaben wie \zB\ "`ein Feld mit $25 \times 70$ Metern"' (aber auch fast \emph{nur} dafür) wird sinnvollerweise der $\times$ (\verb!\times!) Operator und \emph{nicht} einfach das Textzeichen~"`x"' verwendet!
 
 
 \subsection{Variable (Symbole) mit mehreren Zeichen}
@@ -260,14 +262,14 @@ Der Unterschied ist in diesem Fall deutlich sichtbar:
 \end{tabular}
 \end{center}
 %
-Grundsätzlich sollte man derart lange Symbolnamen aber ohnehin vermeiden und stattdessen 
-möglichst kurze (gängige) Symbole verwenden
+Grundsätzlich sollten derart lange Symbolnamen aber ohnehin vermieden und stattdessen 
+möglichst kurze (gängige) Symbole verwendet werden
 (\zB\ Brennweite $f = 50 \, \mathrm{mm}$ statt $\mathit{Brennweite} = 50 \, \mathrm{mm}$).
 
 \subsection{Funktionen}
 
-Während Symbole für Variablen traditionell (und in \latex\ automatisch) \emph{italic} gesetzt werden, verwendet man für die Namen von Funktionen und Operatoren üblicherweise
-\emph{roman} als Schrifttyp, wie \zB in
+Während Symbole für Variablen traditionell (und in \latex\ automatisch) \emph{italic} gesetzt werden, wird für die Namen von Funktionen und Operatoren üblicherweise
+\emph{roman} als Schrifttyp verwendet, wie \zB in
 \begin{center}
 \begin{tabular}{lcl}
 	$\sin \theta = \sin(\theta + 2 \pi)$ & 
@@ -281,7 +283,7 @@ Das ist bei den bereits vordefinierten Standardfunktionen (wie
 \verb!\log!,
 \verb!\max!
 \uva) automatisch der Fall.
-Diese Konvention sollte man auch bei selbstdefinierten Funktionen befolgen,
+Diese Konvention sollte auch bei selbstdefinierten Funktionen befolgt werden,
 wie etwa in
 \begin{center}
 	\begin{tabular}{lcl}
@@ -301,8 +303,8 @@ Der Prototyp kostete über 25.000.000 US\$, also ca.\ 19.200.000 \euro\ nach heu
 \end{quote}
 Der Abstand zwischen der Zahl und der Maßeinheit ist dabei
 gewollt.
-Das \$-Zeichen erzeugt man mit \verb!\$! und
-das Euro-Symbol (\euro) mit dem Makro \verb!\euro!.%
+Das \$-Zeichen erzeugt wird mit \verb!\$! und
+das Euro-Symbol (\euro) mit dem Makro \verb!\euro! erzeugt.%
 \footnote{Das \euro\ Zeichen ist nicht im ursprünglichen \latex-Zeichensatz enthalten
 sondern wird mit dem \texttt{eurosym}-Paket erzeugt.}
 
@@ -324,11 +326,11 @@ als \textbf{Satzzeichen} interpretiert und sieht dann so aus:
 \subsection{Mathematische Werkzeuge}
 
 Für die Erstellung komplizierter Gleichungen ist es mitunter
-hilfreich, auf spezielle Software zurückzugreifen. Unter anderem kann man
+hilfreich, auf spezielle Software zurückzugreifen. Unter anderem können
 aus dem Microsoft \emph{Equation Editor} und aus {\em
 Mathematica} auf relativ einfache Weise \latex-An\-wei\-sun\-gen
-für mathematische Gleichungen exportieren und direkt (mit etwas
-manueller Nacharbeit) in das eigene \latex-Dokument übernehmen.
+für mathematische Gleichungen exportiert und direkt (mit etwas
+manueller Nacharbeit) in das eigene \latex-Dokument übernommen werden.
 
 
 \section{Algorithmen}
@@ -374,7 +376,7 @@ und dem \texttt{algorithmicx}-Paket ausgeführt
 \end{algorithm}
 
 Weitere Details finden sich im Quelltext und natürlich in der Dokumentation der verwendeten Pakete.
-Umfangreichere Beispiele für Algorithmen mit diesem Setup findet man \ua\ in \cite{BurgerBurge06}.
+Umfangreichere Beispiele für Algorithmen mit diesem Setup finden sich \ua\ in \cite{BurgerBurge06}.
 
 \begin{program}
 \begin{LaTeXCode}[numbers=none]
@@ -412,7 +414,7 @@ Umfangreichere Beispiele für Algorithmen mit diesem Setup findet man \ua\ in \c
 \end{algorithm}
 \end{LaTeXCode}
 \caption{Quellcode zu Algorithmus \ref{alg:Example} (mit \texttt{algorithmicx}).
-Wie man sieht, kann man hier auch beliebig Leerzeilen verwenden, was die
+Wie ersichtlich, können hier auch beliebig Leerzeilen verwendet werden, was die
 Lesbarkeit deutlich verbessert.}
 \label{prog:AlgExample}
 \end{program}
