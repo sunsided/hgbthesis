@@ -7,6 +7,6 @@ MainFile=_PrBericht.tex
 UseBibTeX=0
 UseMakeIndex=0
 ActiveProfile=LaTeX(utf8) ⇨ PDF
-ProjectLanguage=
-ProjectDialect=
+ProjectLanguage=en
+ProjectDialect=US
 

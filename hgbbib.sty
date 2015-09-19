@@ -107,10 +107,10 @@
 
 %See http://www.jr-x.de/publikationen/latex/tipps/zeilenumbruch.html
 \newenvironment{bibhyphenation}% 
-	{\hyphenpenalty=20%		(50)
-	 \tolerance=9999%				(200)
-	 \exhyphenpenalty=0%		(50)
-	 \linepenalty=0%				(10)
+	{\hyphenpenalty=2%		(default 50)
+	 \tolerance=9999%			(default 200)
+	 \exhyphenpenalty=2%	(default 50)
+	 \linepenalty=1%			(default 10)
 	 \setlength{\emergencystretch}{3em}}%
 	{}
 
@@ -119,7 +119,7 @@
 % \MakeBibliography[nosplit] ... creates a one-piece reference section
 \newcommand{\MakeBibliography}[1][]{
 	% opt. arg (#1): optional argument "nosplit" to get a 1-piece bibliography
-	\clearpage
+	%\clearpage
 	\ifthenelse{\equal{#1}{nosplit}}%
 		{% create a single bibliography with all entries:
 			%\printbibheading[heading=bibintoc,title={#2}]

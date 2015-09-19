@@ -287,7 +287,8 @@ Diese Konvention sollte auch bei selbstdefinierten Funktionen befolgt werden,
 wie etwa in
 \begin{center}
 	\begin{tabular}{lcl}
-	$\mathrm{Distance}(A,B) = |A-B|$ & $\leftarrow$ & \verb!$\mathrm{Distance}(A,B) = |A-B|$! \\
+	$\mathrm{dist}(A,B) := |A-B|$ & $\leftarrow$ & 
+	\verb!$\mathrm{dist}(A,B) := |A-B|$! \\
 	\end{tabular}
 \end{center}
 
@@ -349,7 +350,7 @@ und dem \texttt{algorithmicx}-Paket ausgeführt
 	eindimensionale kubische Interpolationsfunktion.}
 \label{alg:Example}
 
-\begin{algorithmic}[1]% [1] heißt alle Zeilen werden numeriert
+\begin{algorithmic}[1]     % [1] = all lines are numbered
 \Procedure{BicubicInterpolation}{$I, x, y$} \Comment{$x,y \in \R$}
 	\Statex Returns the interpolated value of the image $I$ 
 					at the continuous position $(x, y)$.
@@ -386,7 +387,7 @@ Umfangreichere Beispiele für Algorithmen mit diesem Setup finden sich \ua\ in \
 	eindimensionale kubische Interpolationsfunktion.}
 \label{alg:Example}
 
-\begin{algorithmic}[1]% [1] heißt alle Zeilen werden numeriert
+\begin{algorithmic}[1]     % [1] = all lines are numbered
 \Procedure{BicubicInterpolation}{$I, x, y$} \Comment{$x,y \in \R$}
 	\Statex Returns the interpolated value of the image $I$ 
 					at the continuous position $(x, y)$.

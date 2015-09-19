@@ -6,17 +6,19 @@
 \documentclass[a4paper,twocolumn,english,11pt]{article}		
 %\documentclass[a4paper,ngerman,11pt]{article}
 
-\RequirePackage[utf8]{inputenc}		% it is assumed that all source files are UTF8 encoded!
+\RequirePackage[utf8]{inputenc}		% remove when using lualatex oder xelatex!
 
 \usepackage{hgb}
+\usepackage{hgbabbrev}
+\usepackage{hgblistings}
 \usepackage{hgbbib}
-%\usepackage{hgbheadings}
+\usepackage{hgbheadings}
 
 \usepackage{lipsum}		% for dummy texts only
 \flushbottom
 
 \graphicspath{{images/}}   % where are the images?
-\bibliography{literatur}  	% name of the BibTeX (.bib) file
+\bibliography{literatur}   % requires file 'literatur.bib'
 
 
 \author{
@@ -66,7 +68,8 @@ sections, sections to subsections etc.
 
 This document is typeset in the typical two-column format required by many
 scientific journals. Unfortunately, the narrow text width often creates problems 
-with mathematical structures \cite{mathmode10}. While smaller equations like
+with mathematical structures \cite{mathmode10}. 
+While smaller equations like
 %
 \begin{equation}
 \bar{\mathbf{M}} =  
@@ -138,14 +141,14 @@ of the document.
 \lipsum[5-7]
 
 \section{Summary and conclusion}
-\lipsum[8-10]
+\lipsum[8-9]
 
 
 
 
 %%%----------------------------------------------------------
-
-\printbibliography
+  
+\printbibliography  % alternatively: \MakeBibliography[nosplit]
 
 %%%----------------------------------------------------------
 
