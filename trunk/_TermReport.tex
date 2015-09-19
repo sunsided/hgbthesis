@@ -6,19 +6,21 @@
 \documentclass[a4paper,english,11pt]{report}		
 %\documentclass[a4paper,ngerman,11pt]{report}
 
-\RequirePackage[utf8]{inputenc}		% it is assumed that all source files are UTF8 encoded!
+\RequirePackage[utf8]{inputenc}		% remove when using lualatex oder xelatex!
 
 \usepackage{hgb}
+\usepackage{hgbabbrev}
+\usepackage{hgblistings}
 \usepackage{hgbbib}
 \usepackage{hgbheadings}
 
 
-\graphicspath{{images/}}   % where are the images?
-\bibliography{literatur}  % requires literatur.bib 
+\graphicspath{{images/}}  % where are the images?
+\bibliography{literatur}  % requires file 'literatur.bib'
 
 \author{Peter A.\ Wiseguy}
-\title{IM520/MC505 Computer Vision \\ Term Report}
-\date{June 2014}
+\title{IM520/MC505 Computer Vision\\ Term Report}
+\date{June 2015}
 
 %%%----------------------------------------------------------
 \begin{document}
@@ -27,19 +29,20 @@
 \tableofcontents
 %%%----------------------------------------------------------
 
-\chapter*{Summary}
+\chapter*{Preface} % Vorwort
 
-This document is a template for a typical term or semester paper (lab/course report, 
-``Übungsbericht'' etc.) based on the \texttt{hgb.sty} (Hagenberg) LaTeX style file.
+This document is a simple template for a typical term or semester paper (lab/course report, 
+``Übungsbericht'' etc.) based on the \texttt{hagenberg} \latex package.%
+\footnote{See \url{http://sourceforge.net/projects/hgbthesis/} for the most current version.}
 It is based on \latex's standard \texttt{report} document class with \texttt{chapter} as the top 
 structuring element.
-If you wish to write this report in German you should substitute the command
+If you wish to write this report in German you should substitute the line
 \begin{quote}
- \verb!\documentclass[english]{hgbtermreport}! 
+ \verb!\documentclass[a4paper,english,11pt]{report}! 
 \end{quote}
 at the top of this document by
 \begin{quote}
- \verb!\documentclass[german]{hgbtermreport}!.
+ \verb!\documentclass[a4paper,ngerman,11pt]{report}!.
 \end{quote}
 Also, you may want to place the text of the individual chapters in separate files and 
 include them using \verb!\include{..}! 
@@ -87,7 +90,6 @@ More chapters will follow.
 
 
 
-
 \chapter{Summary and comments}
 
 This could be a good place to describe how you experienced this course, what you liked or didn't, and to provide suggestions for improvement.
@@ -95,7 +97,7 @@ This could be a good place to describe how you experienced this course, what you
 
 
 %%%----------------------------------------------------------
-\MakeBibliography
+\MakeBibliography[nosplit]
 %%%----------------------------------------------------------
 
 \end{document}

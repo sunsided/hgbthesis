@@ -309,10 +309,21 @@ zur Annotierung von importierten Grafiken (verwendet zudem das \texttt{pict2e}-P
 \item[2015/08/03]
 Logo-Datei auf \texttt{logo.pdf} umbenannt.
 \item[2015/09/17]
-Anweisung \verb!\RequirePackage[utf8]{inputenc}! in die Haupt\-quell\-dateien (\texttt{\_xxx.tex})
-verschoben (auf Anregung von Markus Kohm): \emph{Für die Verwendung von lualatex oder xelatex ist die Anweisung 
-in hgb.sty störend, da bei diesen beiden aufgrund der nativen utf8-
-Unterstützung inputenc keinesfalls verwendet werden darf.}
+Anweisung \verb!\RequirePackage[utf8]{inputenc}! in die Doku\-menten\-dateien (\texttt{\_xxx.tex})
+verschoben (auf Anregung von Markus Kohm: "`\ldots für die Verwendung von lualatex oder xelatex 
+ist die Anweisung in hgb.sty störend, da bei diesen beiden aufgrund der nativen utf8-Unterstützung inputenc 
+keinesfalls verwendet werden darf"').
+\item[2015/09/19]
+\texttt{hgb.sty} aufgeräumt.
+Makros \verb!\@savesymbol! und \verb!\@restoresymbol! aus \texttt{hgb.sty} entfernt
+(wurden nicht mehr verwendet; ggfs.\ Paket \texttt{savesym} als Ersatz).
+Makro \verb!\optbreaknh! (optional break with no hyphen) auf \verb!\obnh! umbenannt.
+Teile von \texttt{hgb.sty} in neue Dateien \texttt{hgbabbrev.sty} (div.\ Abkürzungen)
+und \texttt{hgblistings.sty} (Code-Listings) verschoben.
+Hintergrundtönung der Code-Listings heller (auf 2.5\% Grau) eingestellt.
+Layout: \verb!\textfraction! auf 0.1 (statt fehlhafterweise 0.01) eingestellt.
+\texttt{hgbbib.sty}: \verb!\clearpage! am Beginn des Quellenverzeichnisses entfernt
+(für \texttt{article}-Template).
 \end{description}
 
 \end{sloppypar}

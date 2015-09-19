@@ -7,6 +7,8 @@
 \newcommand{\hgbthesisDate}{2015/07/14} %Versionsdatum
 \ProvidesClass{hgbthesis}[\hgbthesisDate\space LaTeX-Vorlage fuer Diplomarbeiten, Masterarbeiten, Bachelorarbeiten etc.]
 
+\RequirePackage[utf8]{inputenc}	% notwendig wg. Erklärungstext!
+
 \RequirePackage{ifthen}
 
 \RequirePackage{ifpdf}	% for checking PDF mode
@@ -479,6 +481,8 @@ acknowledged. I further declare that this or similar work has not been submitted
 %%-------------------------------------------------------------
 
 \usepackage{hgbheadings}
+\usepackage{hgbabbrev}
+\usepackage{hgblistings}
 \usepackage{hgbbib}
 
 %%-------------------------------------------------------------
