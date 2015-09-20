@@ -211,9 +211,8 @@ Produktbezeichnungen, Fremdwörter und Variablen im Text, \zB
 %
 \item {\sl Slanted} %
 (\verb!\textsl{..}!) bedeutet eine geneigte Schrift und
-unterscheidet sich damit deutlich von \textit{Italic}. Wird
-beispielsweise verwendet für die laufenden Kopfzeilen,
-Produktbezeichnungen und Markennamen -- zum Vergleich:
+unterscheidet sich damit deutlich von \textit{Italic}; 
+zum Vergleich:
 %
 \begin{quote}
 \verb!\textrm{Daimler-Chrysler}! $\rightarrow$ \textrm{Daimler-Chrysler} \newline%
@@ -439,7 +438,7 @@ sollten Fußnoten nicht (wie \va\ in manchen
 sozialwissenschaftlichen Werken gepflegt) derart lang werden, dass
 sie einen Großteil der Seite einnehmen und damit praktisch ein
 zweites Dokument bilden.%
-\footnote{Das führt bei Dokumenten mit vielen Fußnoten bei manchen Lesern angeblich so weit, dass sie aus Neugier (oder Versehen) regelmäßig bei den Fußnoten zu lesen beginnen und dann mühevoll die zugehörigen, kleingedruckten Verweise im Fließtext suchen.}
+\footnote{Das führt bei Dokumenten mit vielen Fußnoten bei manchen Lesern angeblich so weit, dass sie aus Neugier (oder Versehen) regelmäßig bei den Fußnoten zu lesen beginnen und dann mühevoll die zugehörigen, kleingedruckten Verweise im Haupttext suchen.}
 
 
 \subsection{Querverweise}
@@ -732,15 +731,22 @@ auch beim früheren Bleisatz durchaus üblich.}
 
 \section{Das {\tt hagenberg}-Paket}
 
-Diesem Dokument angeschlossen sind zwei Dateien, die beide zum Erstellen dieses Dokuments erforderlich sind:
+Dieses Paket enthält mehrere \latex-Dateien, die 
+zum Erstellen dieses Dokuments erforderlich sind:
 %
-\begin{description}
-\item[\nolinkurl{hgbthesis.cls} (class file):] definiert die 
+\begin{itemize}
+\item \nolinkurl{hgbthesis.cls} (Class-Datei): definiert die 
 		Dokumentenstruktur, Layout und den gesamten Vorspann des Dokuments (Titelseite etc.).
-\item[\nolinkurl{hgb.sty} (style file):] enthält nützliche 
-		Definitionen. Diese Datei wird von \nolinkurl{hgbthesis.cls} automatisch geladen, kann 
+\item \nolinkurl{hgb.sty} (Style-Datei): enthält zentrale Definitionen und Einstellungen. 
+		Diese Datei wird von \nolinkurl{hgbthesis.cls} automatisch geladen, kann 
 		aber grundsätzlich auch für andere Dokumente verwendet werden.
-\end{description}
+\item Weitere Style-Dateien:
+	\nolinkurl{hgbabbrev.sty} (div.\ Abkürzungen),
+	\nolinkurl{hgbbib.sty} (Literaturverwaltung),
+	\nolinkurl{hgbheadings.sty} (Seiten-Header),
+	\nolinkurl{hgblistings.sty} (Code-Listings).
+	Diese Dateien werden von \nolinkurl{hgbthesis.cls} verwendet.
+\end{itemize}
 
 
 \subsection{Einstellungen}
@@ -930,7 +936,7 @@ sollte auch darauf geachtet werden, dass keine \emph{doppelten} Punkte gesetzt w
 
 
 \begin{table}
-\caption{In \texttt{hgb.sty} definierte Abkürzungsmakros.}
+\caption{In \texttt{hgbabbrev.sty} definierte Abkürzungsmakros.}
 \label{tab:abkuerzungen}
 \centering
 \begin{tabular}{llp{2cm}ll}
@@ -996,7 +1002,8 @@ Die aktuellen Versionen der Pakete sind online verfügbar, \ua\ auf den
 in Abschn.~\ref{sec:literatur} angegebenen CTAN-Sites.
 
 \begin{table}
-\caption{Im \texttt{hagenberg}-Paket verwendeten \latex-Ergänzungen. Alle sind in gängigen \latex\ Standardinstallationen (\zB MikTeX) bereits enthalten.}
+\caption{Die wichtigsten der im \texttt{hagenberg}-Paket verwendeten \latex-Ergänzungen. 
+Alle sind in den gängigen \latex\ Standardinstallationen (\zB MikTeX) bereits enthalten.}
 \label{tab:packages}
 \centering\small
 \tabcolsep2pt

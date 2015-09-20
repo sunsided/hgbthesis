@@ -4,7 +4,7 @@
 %% Bachelor- und Diplomarbeiten.
 
 \NeedsTeXFormat{LaTeX2e}
-\newcommand{\hgbthesisDate}{2015/07/14} %Versionsdatum
+\newcommand{\hgbthesisDate}{2015/09/19} %Versionsdatum
 \ProvidesClass{hgbthesis}[\hgbthesisDate\space LaTeX-Vorlage fuer Diplomarbeiten, Masterarbeiten, Bachelorarbeiten etc.]
 
 \RequirePackage[utf8]{inputenc}	% notwendig wg. Erklärungstext!
