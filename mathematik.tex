@@ -15,32 +15,47 @@ Hier nur einige Beispiele und spezielle Themen, vieles weitere dazu findet sich 
 \section{Mathematische Elemente im Fließtext}
 
 Mathematische Symbole, Ausdrücke, Gleichungen etc.\ werden im Fließtext durch paarweise 
-\verb!$! \ldots \verb!$! markiert. Hier ein Beispiel:
+\verb!$! \ldots \verb!$! markiert. Hier ein simples Beispiel:
 %
-\begin{quote}
+\begin{itemize}
+\item[]
 Der Nah-Unendlichkeitspunkt liegt bei
-$\bar{a} = f' \cdot \bigl( \frac{f'}{K \cdot u_{\max}} + 1 \bigr)$,
+$\bar{a} = f' \cdot (f' / (K \cdot u_{\max}) + 1)$,
 sodass bei einem auf $\infty$ eingestellten Objektiv von der Entfernung
 $\bar{a}$ an alles scharf ist. Fokussiert man das
 Objektiv auf die Entfernung $\bar{a}$ (\dah, $a_0 = \bar{a}$), dann wird
 im Bereich $[\frac{\bar{a}}{2}, \infty]$ alles scharf.
-\end{quote}
+\end{itemize}
 %
 Dabei sollte unbedingt darauf geachtet werden, dass die Höhe der einzelnen Elemente im Text nicht zu groß wird. 
 
 \paragraph{Häufiger Fehler:} 
-Im Fließtext wird bei einfachen Variablen oft auf die Verwendung der richtigen, mathematischen Zeichen vergessen, wie etwa in 
-"`X-Achse"' anstelle von "`$X$-Achse"' (\verb!$X$-Achse!).
+Im Fließtext wird bei einfachen Variablen oft auf die Verwendung der richtigen, mathematischen
+Zeichen vergessen, wie etwa in "`X-Achse"' anstelle von "`$X$-Achse"' (\verb!$X$-Achse!).
 
-
+\paragraph{Zeilenumbrüche:}
+Bei längeren mathematischen Elementen im Fließtext sind Probleme mit Zeilenumbrüchen
+vorprogrammiert. In der Regel ermöglicht \latex nur am "`="' einen Zeilenumbruch,
+an anderer Stelle kann man Umbrüche mit \verb!\allowbreak! ermöglichen. Hier ein kleines Beispiel:
+\begin{itemize}
+\item[a)] Einen einfachen Zeilenvektor definiert man in der Form 
+		$\boldsymbol{x} = (x_0, x_1, \ldots, x_{n-1})$.
+\item[b)] Einen einfachen Zeilenvektor definiert man in der Form 
+	$\boldsymbol{x} = (x_0,\allowbreak x_1,\allowbreak\ldots,\allowbreak x_{n-1})$.
+\end{itemize}
+Die Zeile in a) sollte über den Seitenrand hinauslaufen, b) hingegen enthält
+\verb!\allowbreak! an mehreren Stellen und sollte sauber umbrechen.
 
 \section{Freigestellte Ausdrücke}
 
-Freigestellte mathematische Ausdrücke können in \latex\ im einfachsten Fall durch paarweise \verb!$$! \ldots \verb!$$! erzeugt werden. Das Ergebnis wird zentriert, erhält jedoch keine Numerierung. So ist \zB\ $$ y = 4 x^2 $$ das Ergebnis von \verb!$$ y = 4 x^2 $$!.
+Freigestellte mathematische Ausdrücke können in \latex\ im einfachsten Fall durch paarweise 
+\verb!$$! \ldots \verb!$$! erzeugt werden. Das Ergebnis wird zentriert, erhält jedoch keine 
+Numerierung. So ist \zB\ $$ y = 4 x^2 $$ das Ergebnis von \verb!$$ y = 4 x^2 $$!.
 
 \subsection{Einfache Gleichungen} 
 
-Meistens wird in solchen Fällen jedoch die \texttt{equation}-Umgebung zur Herstellung numerierter Gleichungen verwendet, auf die im Text jederzeit verwiesen werden kann. Zum Beispiel erzeugt
+Meistens wird in solchen Fällen jedoch die \texttt{equation}-Umgebung zur Herstellung numerierter 
+Gleichungen verwendet, auf die im Text jederzeit verwiesen werden kann. Zum Beispiel erzeugt
 %
 \begin{LaTeXCode}[numbers=none]
 \begin{equation}
@@ -231,7 +246,7 @@ $x \in \R$ , $k \in \N_0$, $z = (a + \mathrm{i} \cdot b) \in \Cpx$.
 \subsection{Operatoren}
 
 In \latex\ sind Dutzende von mathematischen Operatoren für spezielle Anwendungen definiert. Am häufigsten werden natürlich die arithmetischen Operatoren $+$, $-$, $\cdot$ und $/$ benötigt. Ein dabei oft beobachteter Fehler (der wohl aus der Programmierpraxis resultiert) ist die Verwendung von $*$ für die einfache Multiplikation -- richtig ist $\cdot$ (\verb!\cdot!).%
-\footnote{Das Zeichen $*$ wird üblicherweise für den Faltungsoperator verwendet.}
+\footnote{Das Zeichen $*$ ist üblicherweise für den \emph{Faltungsoperator} vorgesehen.}
 %
 Für Angaben wie \zB\ "`ein Feld mit $25 \times 70$ Metern"' (aber auch fast \emph{nur} dafür) wird sinnvollerweise der $\times$ (\verb!\times!) Operator und \emph{nicht} einfach das Textzeichen~"`x"' verwendet!
 
@@ -344,6 +359,9 @@ Das Beispiel in Alg.~\ref{alg:Example} wurde mit der Float-Umgebung \texttt{algo
 und dem \texttt{algorithmicx}-Paket ausgeführt
 (Quellcode in Prog.~\ref{prog:AlgExample}).
 
+
+%%--------------------------------------------------------------------
+
 \begin{algorithm}[tbp]
 \caption{Bikubische Interpolation in 2D.
 	$w_{\mathrm{cub}}()$ in Zeile \ref{alg:wcub} bezeichnet die 
@@ -376,10 +394,16 @@ und dem \texttt{algorithmicx}-Paket ausgeführt
 \end{algorithmic}
 \end{algorithm}
 
+%%--------------------------------------------------------------------
+
 Weitere Details finden sich im Quelltext und natürlich in der Dokumentation der verwendeten Pakete.
 Umfangreichere Beispiele für Algorithmen mit diesem Setup finden sich \ua\ in \cite{BurgerBurge06}.
 
 \begin{program}
+\caption{Quellcode zu Algorithmus \ref{alg:Example} (mit \texttt{algorithmicx}).
+Wie ersichtlich, können hier auch beliebig Leerzeilen verwendet werden, was die
+Lesbarkeit deutlich verbessert.}
+\label{prog:AlgExample}
 \begin{LaTeXCode}[numbers=none]
 \begin{algorithm}
 \caption{Bikubische Interpolation in 2D.
@@ -414,9 +438,5 @@ Umfangreichere Beispiele für Algorithmen mit diesem Setup finden sich \ua\ in \
 \end{algorithmic}
 \end{algorithm}
 \end{LaTeXCode}
-\caption{Quellcode zu Algorithmus \ref{alg:Example} (mit \texttt{algorithmicx}).
-Wie ersichtlich, können hier auch beliebig Leerzeilen verwendet werden, was die
-Lesbarkeit deutlich verbessert.}
-\label{prog:AlgExample}
 \end{program}
 
