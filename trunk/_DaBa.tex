@@ -1,10 +1,22 @@
+%% This file is UTF-8 encoded.
+%% äöüÄÖÜß  <-- keine deutschen Umlaute hier? UTF-faehigen Editor verwenden!
+
 \documentclass[master,german]{hgbthesis}
 % Zulässige Class Options: 
 %   Typ der Arbeit: diplom, master (default), bachelor, praktikum 
 %   Hauptsprache: german (default), english
 %%------------------------------------------------------------
 
-%% äöüÄÖÜß  <-- keine deutschen Umlaute hier? UTF-faehigen Editor verwenden!
+\RequirePackage[utf8]{inputenc}
+\lstset{literate=% to allow Umlauts etc. in listed code % utf8-change
+{Ö}{{\"O}}1
+{Ä}{{\"A}}1
+{Ü}{{\"U}}1
+{ü}{{\"u}}1
+{ä}{{\"a}}1
+{ö}{{\"o}}1
+{ß}{{\ss}}2
+}
 
 \graphicspath{{images/}}    % name of directory containing the images
 \logofile{logo}							% name of logo-PDF in images/ (or use \logofile{} for no logo)
