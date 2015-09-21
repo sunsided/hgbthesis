@@ -7,11 +7,11 @@
 \newcommand{\hgbthesisDate}{2015/09/19} %Versionsdatum
 \ProvidesClass{hgbthesis}[\hgbthesisDate\space LaTeX-Vorlage fuer Diplomarbeiten, Masterarbeiten, Bachelorarbeiten etc.]
 
-\RequirePackage[utf8]{inputenc}	% notwendig wg. Erklärungstext!
+
 
 \RequirePackage{ifthen}
 
-\RequirePackage{ifpdf}	% for checking PDF mode
+\RequirePackage{ifpdf}	% for checking PDF mode 
 \ifpdf{}% \typeout{hgbthesis: *** LaTeX in PDF mode ***}
 \else{\errmessage{hgbthesis: *** LaTeX NOT running in PDF mode ***}}
 \fi
@@ -40,7 +40,7 @@
 \RequirePackage{hgb}	% load associated style file hgb.sty
 
 
-%-------------- Setup für Seiten im Front-Teil --------------------
+%-------------- Setup fuer Seiten im Front-Teil --------------------
 
 \newcommand{\@studiengang}{\@MissingArg{Studiengang??}}
 \newcommand{\studiengang}[1]{%
@@ -292,8 +292,8 @@
 
 \newcommand{\@ccLicenseAt}{%
 Diese Arbeit wird unter den Bedingungen der \textsl{Creative Commons Lizenz} 
-\emph{Namens\-nennung--NichtKommerziell--Keine\-Bearbeitung Österreich} 
-(CC BY-NC-ND) veröffentlicht --
+\emph{Namens\-nennung--NichtKommerziell--Keine\-Bearbeitung \"Osterreich} 
+(CC BY-NC-ND) ver\"offentlicht --
 siehe \url{http://creativecommons.org/licenses/by-nc-nd/3.0/at/}.}
 
 \newcommand{\@ccLicenseEn}{%
@@ -388,17 +388,17 @@ im\\
 \end{center}
 }
 
-%% -------------- Erklärung / Declaration ---------
+%% -------------- Erklaerung / Declaration ---------
 
 \newcommand{\@erklaerungsseiteDe}{%
 \begin{german}
-\chapter{Erklärung}
+\chapter{Erkl\"arung}
 \noindent
-%Standardfassung der FH-OÖ ab 04.04.2012:
-Ich erkläre eidesstattlich, dass ich die vorliegende Arbeit selbstständig und ohne fremde Hilfe verfasst, 
+%Standardfassung der FH-OOe ab 04.04.2012:
+Ich erkl\"are eidesstattlich, dass ich die vorliegende Arbeit selbstst\"andig und ohne fremde Hilfe verfasst, 
 andere als die angegebenen Quellen nicht benutzt und die den benutzten Quellen entnommenen Stellen als 
-solche gekennzeichnet habe. Die Arbeit wurde bisher in gleicher oder ähnlicher Form keiner anderen 
-Prüfungsbehörde vorgelegt.
+solche gekennzeichnet habe. Die Arbeit wurde bisher in gleicher oder \"ahnlicher Form keiner anderen 
+Pr\"ufungsbeh\"orde vorgelegt.
 \par
 \vspace{10mm}
 \noindent

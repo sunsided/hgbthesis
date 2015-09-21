@@ -1,4 +1,4 @@
-%% hgb.sty
+%% This file is ANSI-encoded.
 %% Autor: Wilhelm Burger (wilhelm.burger@fh-hagenberg.at)
 %% Diese Datei ist Teil des hagenberg-Package zur Erstellung von 
 %% Bachelor- und Diplomarbeiten.
@@ -15,7 +15,7 @@
 %% ------------------ Required Packages ----------------------
 
 \RequirePackage{lmodern}	   % use Latin Modern Fonts
-\RequirePackage[T1]{fontenc} % T1 font encoding for improved hyphenation
+\RequirePackage[T1]{fontenc}   % T1 font encoding for improved hyphenation
 \RequirePackage{cmap}	       % make generated PDF files "searchable and copyable"
 
 \RequirePackage{ifthen}
@@ -50,11 +50,11 @@
 \RequirePackage{moreverb}
 \def\verbatimtabsize{2\relax}
 
-%\RequirePackage[noadjust]{cite} % vermeidet zusätzliches Spacing vor [..]
+%\RequirePackage[noadjust]{cite} % vermeidet zusaetzliches Spacing vor [..]
 
 \RequirePackage{ifpdf}
 \ifpdf % LaTeX is in native PDF mode (pdflatex) 
-  \RequirePackage{epstopdf}		% zur automatischen Konvertierung von EPS-Dateien nach PDF für pdflatex
+  \RequirePackage{epstopdf}		% zur automatischen Konvertierung von EPS-Dateien nach PDF fuer pdflatex
 %  \pdfcompresslevel=0			  % 0 = keine Kompression, 9 = max. Kompression
 %  \pdfimageresolution=300
 \else % LaTeX is in emulation mode (DVI-PS-PDF)
@@ -77,7 +77,7 @@
 %\RequirePackage[all]{hypcap} % fixes hyperref problem with references to float captions
 \RequirePackage[figure,table,table*]{hypcap}	% do not redefine figure* for use in article (without captions)
 %\RequirePackage[novbox]{pdfsync} % ersetzt durch -synctex=-1 option
-%\RequirePackage[noadjust]{cite} % vermeidet zusätzliches Spacing vor [..] % entfernt wegen biblatex
+%\RequirePackage[noadjust]{cite} % vermeidet zusaetzliches Spacing vor [..] % entfernt wegen biblatex
 
 
 %% ------------- Math Stuff --------------
@@ -117,7 +117,7 @@
   \vskip 2.5ex}
 
 
-% Erzeugt einen neuen, nicht eingerückten Absatz mit zusätzlichem Abstand:
+% Erzeugt einen neuen, nicht einger�ckten Absatz mit zusaetzlichem Abstand:
 \newcommand{\SuperPar}[0]{% 
 \par\bigskip\noindent%
 }
@@ -143,13 +143,13 @@ H\"ohe $ = #2 {\rm\ mm}$
 
 %% ------------- Einstellungen fuer's Layout --------------
 
-\frenchspacing     	  % erzeugt normale Abstände zwischen Sätzen
+\frenchspacing     	  % erzeugt normale Abstaende zwischen Saetzen
 \setlength{\parskip}{0pt plus 0.1pt}
 \raggedbottom					%\flushbottom
 
 %\pagestyle{headings}  % Normale Kopfzeilen
 
-%% div. Parameter: nur dann ändern, wenn man genau weiss was man tut!
+%% div. Parameter: nur dann aendern, wenn man genau weiss was man tut!
 %\setlength{\hoffset}{-1in}
 %\setlength{\voffset}{-1in}
 %\setlength{\oddsidemargin}{3cm}
@@ -199,7 +199,7 @@ H\"ohe $ = #2 {\rm\ mm}$
 	parsep = .4ex plus .2ex
 }
 %\setlist{nolistsep}	% kein Spacing zwischen items
-%\setlist{noitemsep}  % überhaupt kein vertik. Spacing
+%\setlist{noitemsep}  % �berhaupt kein vertik. Spacing
 
 
 \newenvironment{nowidows}%
@@ -215,7 +215,7 @@ H\"ohe $ = #2 {\rm\ mm}$
 
 %% ------------- Definitions for Algorithms ---------
 
-% 'algorithm' liefert die Float-Umgebung für Algorithmen (\begin{algorithm}...)
+% 'algorithm' liefert die Float-Umgebung f�r Algorithmen (\begin{algorithm}...)
 \@ifundefined{chapter}%
   {\RequirePackage[ruled]{algorithm}}%
 	{\RequirePackage[ruled,chapter]{algorithm}}
