@@ -1,4 +1,4 @@
-%% This file is UTF-8 encoded.
+%% File encoding: UTF-8
 %% äöüÄÖÜß  <-- keine deutschen Umlaute hier? UTF-faehigen Editor verwenden!
 
 \documentclass[master,german]{hgbthesis}
@@ -7,16 +7,7 @@
 %   Hauptsprache: german (default), english
 %%------------------------------------------------------------
 
-\RequirePackage[utf8]{inputenc}
-\lstset{literate=% to allow Umlauts etc. in listed code % utf8-change
-{Ö}{{\"O}}1
-{Ä}{{\"A}}1
-{Ü}{{\"U}}1
-{ü}{{\"u}}1
-{ä}{{\"a}}1
-{ö}{{\"o}}1
-{ß}{{\ss}}2
-}
+\RequirePackage[utf8]{inputenc}		% remove when using lualatex oder xelatex!
 
 \graphicspath{{images/}}    % name of directory containing the images
 \logofile{logo}							% name of logo-PDF in images/ (or use \logofile{} for no logo)

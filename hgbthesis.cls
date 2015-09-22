@@ -1,3 +1,4 @@
+%% File encoding: ASCII
 %% hgbthesis.cls
 %% Autor: Wilhelm Burger (wilhelm.burger@fh-hagenberg.at)
 %% Diese Datei ist Teil des hagenberg-Package zur Erstellung von 

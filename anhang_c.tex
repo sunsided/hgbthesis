@@ -320,14 +320,15 @@ Makros \verb!\@savesymbol! und \verb!\@restoresymbol! aus \texttt{hgb.sty} entfe
 Makro \verb!\optbreaknh! (optional break with no hyphen) auf \verb!\obnh! umbenannt.
 Teile von \texttt{hgb.sty} in neue Dateien \texttt{hgbabbrev.sty} (div.\ Abkürzungen)
 und \texttt{hgblistings.sty} (Code-Listings) verschoben.
-Hintergrundtönung der Code-Listings heller (auf 2.5\% Grau) eingestellt.
+Hintergrundtönung der Code-Listings heller (auf 5\% Grau) eingestellt.
 Layout: \verb!\textfraction! auf 0.1 (statt fehlhafterweise 0.01) eingestellt.
 \texttt{hgbbib.sty}: \verb!\clearpage! am Beginn des Quellenverzeichnisses entfernt
 (für \texttt{article}-Template).
 \item[2015/09/19]
-Alle \texttt{.cls} und \texttt{.sty} Dateien sind jetzt ANSI-codiert, wie
+Alle \texttt{.cls} und \texttt{.sty} Dateien sind jetzt ANSI-codiert (Header eingefügt), wie
 laut CTAN-Richtlinien vorgesehen. Umlautzeichen wurden durch Makros ersetzt.
-\verb!\RequirePackage[utf8]{inputenc}! steht jetzt nur mehr am Beginn
+Nur \texttt{hgblistings.sty} ist weiterhin UTF-8 (wegen notwendiger literaler Umlaute).
+\verb!\RequirePackage[utf8]{inputenc}! steht sonst nur mehr am Beginn
 der jeweiligen (\texttt{.tex}) Haupttextdatei.
 \end{description}
 

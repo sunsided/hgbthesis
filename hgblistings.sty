@@ -1,4 +1,4 @@
-%% This file is ANSI-encoded.
+%% File encoding: UTF-8
 \ProvidesPackage{hgblistings}
 
 \RequirePackage{ifthen}
@@ -6,8 +6,7 @@
 %\RequirePackage{textcomp}
 
 \RequirePackage{xcolor}
-\definecolor{ListingsBackgroundColor}{gray}{0.975}
-
+\definecolor{ListingsBackgroundColor}{gray}{0.95}
 
 %\RequirePackage{listings}			% utf8-change
 \RequirePackage{listingsutf8} 	% utf8-change
@@ -40,35 +39,16 @@ upquote=true,%
 keepspaces=true,%
 }
 
-%\lst@CCPutMacro
-    %\lst@ProcessOther {"23}\#
-    %\lst@ProcessLetter{"24}\textdollar
-    %\lst@ProcessOther {"25}\%
-    %\lst@ProcessOther {"26}\&
-		%%
-		%\lst@ProcessLetter{"E4}{\"a}
-		%\lst@ProcessLetter{"F6}{\"o}
-		%\lst@ProcessLetter{"FC}{\"u}
-		%\lst@ProcessLetter{"C4}{\"A}
-		%\lst@ProcessLetter{"D6}{\"O}
-		%\lst@ProcessLetter{"DC}{\"U}
-		%\lst@ProcessLetter{"DF}{\ss{}}
-		%%
-    %\lst@ProcessOther {"2A}{\lst@ttfamily*\textasteriskcentered}
-    %\lst@ProcessOther {"2D}{\lst@ttfamily{-{}}{$-$}}
-    %\lst@ProcessOther {"3C}{\lst@ttfamily<\textless}
-    %\lst@ProcessOther {"3E}{\lst@ttfamily>\textgreater}
-    %\lst@ProcessOther {"5C}{\lst@ttfamily{\char92}\textbackslash}
-    %\lst@ProcessOther {"5E}\textasciicircum
-    %\lst@ProcessLetter{"5F}{\lst@ttfamily{\char95}\textunderscore}
-    %\lst@ProcessOther {"7B}{\lst@ttfamily{\char123}\textbraceleft}
-    %\lst@ProcessOther {"7C}{\lst@ttfamily|\textbar}
-    %\lst@ProcessOther {"7D}{\lst@ttfamily{\char125}\textbraceright}
-    %\lst@ProcessOther {"7E}\textasciitilde
-    %\lst@ProcessOther {"7F}-
-    %\@empty\z@\@empty
-
-
+\RequirePackage[utf8]{inputenc}
+\lstset{literate=% to allow Umlauts etc. in listed code % utf8-change
+{Ö}{{\"O}}1
+{Ä}{{\"A}}1
+{Ü}{{\"U}}1
+{ü}{{\"u}}1
+{ä}{{\"a}}1
+{ö}{{\"o}}1
+{ß}{{\ss}}2
+}
 
 \lstnewenvironment{JavaCode}[1][]	% code environment for Java 
 {\lstset{%
