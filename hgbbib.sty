@@ -138,3 +138,11 @@
 			\end{bibhyphenation}
 		}%
 }
+
+% Suppress unusual "In:" within journal article references. 
+% see http://tex.stackexchange.com/questions/10682/suppress-in-biblatex
+\renewbibmacro{in:}{%
+	\ifentrytype{article}{}{%
+	\printtext{\bibstring{in}\intitlepunct}}}
+
+
