@@ -52,30 +52,30 @@
 \tableofcontents
 %%%----------------------------------------------------------
 
-\include{vorwort}		% ggfs. weglassen
-\include{kurzfassung}		
-\include{abstract}			
+\include{frontmatter/vorwort}		% ggfs. weglassen
+\include{frontmatter/kurzfassung}		
+\include{frontmatter/abstract}			
 
 %%%----------------------------------------------------------
 \mainmatter         % Hauptteil (ab hier arab. Seitenzahlen)
 %%%----------------------------------------------------------
 
-\include{einleitung}
-\include{diplomschrift}
-\include{latex}
-\include{abbildungen}
-\include{mathematik}
-\include{literatur}
-\include{drucken}
-\include{schluss}
+\include{chapters/einleitung}
+\include{chapters/diplomschrift}
+\include{chapters/latex}
+\include{chapters/abbildungen}
+\include{chapters/mathematik}
+\include{chapters/literatur}
+\include{chapters/drucken}
+\include{chapters/schluss}
 
 %%%----------------------------------------------------------
 %%%Anhang
 \appendix
-\include{anhang_a}	% Technische Ergänzungen
-\include{anhang_b}	% Inhalt der CD-ROM/DVD
-\include{anhang_c}	% Chronologische Liste der Änderungen
-\include{anhang_d}	% Quelltext dieses Dokuments
+\include{appendix/anhang_a}	% Technische Ergänzungen
+\include{appendix/anhang_b}	% Inhalt der CD-ROM/DVD
+\include{appendix/anhang_c}	% Chronologische Liste der Änderungen
+\include{appendix/anhang_d}	% Quelltext dieses Dokuments
 
 
 %%%----------------------------------------------------------
@@ -83,6 +83,6 @@
 %%%----------------------------------------------------------
 
 %%%Messbox zur Druckkontrolle
-\include{messbox}
+\include{appendix/messbox}
 
 \end{document}
