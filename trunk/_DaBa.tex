@@ -26,14 +26,14 @@
 \abgabedatum{2015}{07}{14}	% {YYYY}{MM}{DD}
 
 %%% zusätzlich für eine Bachelorarbeit: ---------------------
-\nummer{XXXXXXXXXX-A}   % XX...X = Stud-ID, z.B. 0310238045-A  
+\nummer{XXXXXXXXXX-A}   % Stud-ID, z.B. 0310238045-A  
                         % (A = 1. Bachelorarbeit)
 \semester{Sommersemester 2015} 
 \gegenstand{Einführung in die Tiefere Problematik 1} 
 \betreuer{Alois B.~Treuer, Päd.\ Phil.} % oder \betreuerin{..}
 
 %%% zusätzlich für einen Praktikumsbericht: -----------------
-\nummer{XXXXXXXXXX-B}   % XX...X = Stud-ID, z.B. 0310238045-B  
+\nummer{XXXXXXXXXX-B}   % Stud-ID, z.B. 0310238045-B  
                         % (B = 2. Bachelorarbeit)
 \betreuer{Mag.~Pjotr I.~Czar\\Creative Director}  % \betreuerin{..}
 \firma{%
@@ -52,16 +52,16 @@
 \tableofcontents
 %%%----------------------------------------------------------
 
-\include{frontmatter/vorwort}		% ggfs. weglassen
-\include{frontmatter/kurzfassung}		
-\include{frontmatter/abstract}			
+\include{front/vorwort}		% ggfs. weglassen
+\include{front/kurzfassung}		
+\include{front/abstract}			
 
 %%%----------------------------------------------------------
 \mainmatter         % Hauptteil (ab hier arab. Seitenzahlen)
 %%%----------------------------------------------------------
 
 \include{chapters/einleitung}
-\include{chapters/diplomschrift}
+\include{chapters/abschlussarbeit}
 \include{chapters/latex}
 \include{chapters/abbildungen}
 \include{chapters/mathematik}
@@ -72,10 +72,10 @@
 %%%----------------------------------------------------------
 %%%Anhang
 \appendix
-\include{appendix/anhang_a}	% Technische Ergänzungen
-\include{appendix/anhang_b}	% Inhalt der CD-ROM/DVD
-\include{appendix/anhang_c}	% Chronologische Liste der Änderungen
-\include{appendix/anhang_d}	% Quelltext dieses Dokuments
+\include{back/anhang_a}	% Technische Ergänzungen
+\include{back/anhang_b}	% Inhalt der CD-ROM/DVD
+\include{back/anhang_c}	% Chronologische Liste der Änderungen
+\include{back/anhang_d}	% Quelltext dieses Dokuments
 
 
 %%%----------------------------------------------------------
@@ -83,6 +83,6 @@
 %%%----------------------------------------------------------
 
 %%%Messbox zur Druckkontrolle
-\include{appendix/messbox}
+\include{back/messbox}
 
 \end{document}
